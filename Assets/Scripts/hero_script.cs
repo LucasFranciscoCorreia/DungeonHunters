@@ -24,6 +24,7 @@ public class hero_script : MonoBehaviour
         rightTurned = true;
         sr = GetComponent<SpriteRenderer>();
         health = GetComponent<Health>();
+        health.numHearts = 3;
         isPaused = false;
     }
 
@@ -31,12 +32,22 @@ public class hero_script : MonoBehaviour
     void Update()
     {
         var isWalking = false;
-        float hori;
-        if ((hori = Input.GetAxis("Horizontal")) != 0 || Input.GetAxis("Vertical") != 0)
+        float hori = 0, vert = 0;
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
         {
             isWalking = true;
-            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-            //transform.position += move * speed * Time.deltaTime;
+            if (Input.GetKey(KeyCode.A)){
+                hori = -1;
+            } else if (Input.GetKey(KeyCode.D)){
+                hori = 1;
+            }
+            if (Input.GetKey(KeyCode.W)){
+                vert = 1;
+            }else if(Input.GetKey(KeyCode.S)){
+                vert = -1;
+            }
+            Debug.Log(hori + " " + vert);
+            var move = new Vector3(hori, vert, 0);
             body.MovePosition(new Vector2((transform.position.x + move.x * speed * Time.deltaTime), (transform.position.y + move.y * speed * Time.deltaTime)));
             if(hori > 0 && !rightTurned) {
                 sr.flipX = false;
@@ -52,7 +63,7 @@ public class hero_script : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
             health.HealthPickUp();
         if (health.health == 0)
-                SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOver");
 
         animator.SetBool("isWalking", isWalking);
     }
