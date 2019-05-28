@@ -11,7 +11,6 @@ public class hero_script : MonoBehaviour
     private SpriteRenderer sr;
     public bool rightTurned;
     public Health health;
-    public GameObject PauseMenu;
     public bool isPaused;
     
 
@@ -31,41 +30,53 @@ public class hero_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var isWalking = false;
-        float hori = 0, vert = 0;
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
+        if (!PauseMenu.isPaused)
         {
-            isWalking = true;
-            if (Input.GetKey(KeyCode.A)){
-                hori = -1;
-            } else if (Input.GetKey(KeyCode.D)){
-                hori = 1;
+            var isWalking = false;
+            float hori = 0, vert = 0;
+            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
+            {
+                isWalking = true;
+                if (Input.GetKey(KeyCode.A))
+                {
+                    hori = -1;
+                }
+                else if (Input.GetKey(KeyCode.D))
+                {
+                    hori = 1;
+                }
+                if (Input.GetKey(KeyCode.W))
+                {
+                    vert = 1;
+                }
+                else if (Input.GetKey(KeyCode.S))
+                {
+                    vert = -1;
+                }
+                Debug.Log(hori + " " + vert);
+                var move = new Vector3(hori, vert, 0);
+                body.MovePosition(new Vector2((transform.position.x + move.x * speed * Time.deltaTime), (transform.position.y + move.y * speed * Time.deltaTime)));
+                if (hori > 0 && !rightTurned)
+                {
+                    sr.flipX = false;
+                    rightTurned = true;
+                }
+                else if (hori < 0 && rightTurned)
+                {
+                    sr.flipX = true;
+                    rightTurned = false;
+                }
             }
-            if (Input.GetKey(KeyCode.W)){
-                vert = 1;
-            }else if(Input.GetKey(KeyCode.S)){
-                vert = -1;
-            }
-            Debug.Log(hori + " " + vert);
-            var move = new Vector3(hori, vert, 0);
-            body.MovePosition(new Vector2((transform.position.x + move.x * speed * Time.deltaTime), (transform.position.y + move.y * speed * Time.deltaTime)));
-            if(hori > 0 && !rightTurned) {
-                sr.flipX = false;
-                rightTurned = true;
-            }else if(hori < 0 && rightTurned) {
-                sr.flipX = true;
-                rightTurned = false;
-            }
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Space))
-            health.TakeDamage(1);
-        if (Input.GetKeyDown(KeyCode.Q))
-            health.HealthPickUp();
-        if (health.health == 0)
-            SceneManager.LoadScene("GameOver");
 
-        animator.SetBool("isWalking", isWalking);
+            if (Input.GetKeyDown(KeyCode.Space))
+                health.TakeDamage(1);
+            if (Input.GetKeyDown(KeyCode.Q))
+                health.HealthPickUp();
+            if (health.health == 0)
+                SceneManager.LoadScene("GameOver");
+
+            animator.SetBool("isWalking", isWalking);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
