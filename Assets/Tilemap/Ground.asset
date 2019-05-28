@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 535f8e525ff367c4ba67961e201a05ed, type: 3}
   m_Name: Ground
-  m_EditorClassIdentifier: Assembly-CSharp:UnityEngine.Tilemaps:RandomTile
+  m_EditorClassIdentifier: 
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
@@ -36,6 +36,6 @@ MonoBehaviour:
   m_ColliderType: 1
   m_Sprites:
   - {fileID: 21300000, guid: fb9d31c7c2fb5274eab3f7720611642a, type: 3}
-  - {fileID: 21300000, guid: d8c2e967bbe23ed49ab904f96d896ed3, type: 3}
   - {fileID: 21300000, guid: 10a1f6d5f411d0c46822981757383750, type: 3}
+  - {fileID: 21300000, guid: d8c2e967bbe23ed49ab904f96d896ed3, type: 3}
   - {fileID: 21300000, guid: 6627ab5aeb146d944b8c5d91e3cbcfd6, type: 3}
