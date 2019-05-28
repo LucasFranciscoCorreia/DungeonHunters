@@ -70,8 +70,6 @@ public class hero_script : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space))
                 health.TakeDamage(1);
-            if (Input.GetKeyDown(KeyCode.Q))
-                health.HealthPickUp();
             if (health.health == 0)
                 SceneManager.LoadScene("GameOver");
 
