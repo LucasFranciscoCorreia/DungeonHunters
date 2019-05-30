@@ -7,21 +7,21 @@ public class EnemyScript : MonoBehaviour
     public float speed;
     public Transform target;
     public Rigidbody2D body;
+    public EnemyHealth health;
     // Start is called before the first frame update
     void Start()
     {
         speed = 4;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         body = this.GetComponent<Rigidbody2D>();
+        this.health = GetComponent<EnemyHealth>();
+        health.numHearts = 2;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, target.position) > 1.5)
-        {
-            body.MovePosition(Vector2.MoveTowards(body.position, target.position, speed * Time.deltaTime));
-        }
-        //transform.position = Vector2.MoveTowards(body.position, target.position, speed * Time.deltaTime);
+        
     }
+
 }
