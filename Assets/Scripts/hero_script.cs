@@ -36,7 +36,6 @@ public class hero_script : MonoBehaviour
         if (!PauseMenu.isPaused)
         {
             var isWalking = false;
-            var isAttacking = false;
             var isAbleAttack = true;
             float hori = 0, vert = 0;
             if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
@@ -58,7 +57,6 @@ public class hero_script : MonoBehaviour
                 {
                     vert = -1;
                 }
-                Debug.Log(hori + " " + vert);
                 var move = new Vector3(hori, vert, 0);
                 body.MovePosition(new Vector2((transform.position.x + move.x * speed * Time.deltaTime), (transform.position.y + move.y * speed * Time.deltaTime)));
                 if (hori > 0 && !rightTurned)
@@ -78,7 +76,6 @@ public class hero_script : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    Debug.Log("Attacked");
                     timeAttack = startTimeAttack;
                     isAbleAttack = false;
                 }
