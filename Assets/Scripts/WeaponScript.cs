@@ -4,25 +4,39 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-    private Animator animator;
+    public SpriteRenderer sr;
+    public bool rightTurned;
+
     void Start()
     {
-        animator = this.GetComponent<Animator>();
-        this.enabled = false;
+        rightTurned = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        var res = false;
-        if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)){
-            res = true;
-            this.enabled = true;
-        }
-        if(res == false)
+        float hori = 0;
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
         {
-            this.enabled = false;
+            
+            if (Input.GetKey(KeyCode.A))
+            {
+                hori = -1;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                hori = 1;
+            }
+            if (hori > 0 && !rightTurned)
+            {
+                sr.flipX = false;
+                rightTurned = true;
+            }
+            else if (hori < 0 && rightTurned)
+            {
+                sr.flipX = true;
+                rightTurned = false;
+            }
         }
-        animator.SetBool("isAttacking", res);
     }
 }

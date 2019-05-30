@@ -14,6 +14,7 @@ public class hero_script : MonoBehaviour
     public bool isPaused;
     public float timeAttack;
     public float startTimeAttack;
+    public SpriteRenderer weapon;
 
     // Start is called before the first frame update
     void Start()
@@ -63,11 +64,13 @@ public class hero_script : MonoBehaviour
                 if (hori > 0 && !rightTurned)
                 {
                     sr.flipX = false;
+                    weapon.flipX = false;
                     rightTurned = true;
                 }
                 else if (hori < 0 && rightTurned)
                 {
                     sr.flipX = true;
+                    weapon.flipX = true;
                     rightTurned = false;
                 }
             }
