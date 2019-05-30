@@ -111,14 +111,14 @@ TextureImporter:
         y: 20
         width: 9
         height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.32315388, y: 0.070516765}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acb65ebae8132ca49b60d05769fa7c4b
+      spriteID: 00500a0cf21ba8e47bb33a1ceeaeca35
       internalID: -3837932155035078651
       vertices: []
       indices: 
@@ -132,14 +132,14 @@ TextureImporter:
         y: 21
         width: 10
         height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.20289879, y: 0.055358615}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d0e14789f774dc4ca14988e8666feeb
+      spriteID: 3f2a430d288c1764ea2c28d2e7fb3891
       internalID: -31660399908621335
       vertices: []
       indices: 
@@ -153,14 +153,14 @@ TextureImporter:
         y: 20
         width: 15
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.13923416, y: 0.094861895}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51ea4e5ead210d245bae284fcb328035
+      spriteID: 3cbf03925202c95448c7878f22bdcd6e
       internalID: -8641354022124313527
       vertices: []
       indices: 
@@ -171,17 +171,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 53
-        y: 20
+        y: 21
         width: 19
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.1593387, y: 0.072253644}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23678cab6c946074dbc81a8fe5adedfe
+      spriteID: f9f208b7cf352c14788af6063bf5f46c
       internalID: -9004052171756258869
       vertices: []
       indices: 
@@ -195,14 +195,14 @@ TextureImporter:
         y: 23
         width: 22
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.1672079, y: 0.13857096}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acc2ad02194cfdb4fa1fb14d3391fcc5
+      spriteID: 80ed9055ce763a64fbb194333a632cfb
       internalID: 328886408616419011
       vertices: []
       indices: 
@@ -212,18 +212,18 @@ TextureImporter:
       name: Axe_atk_5
       rect:
         serializedVersion: 2
-        x: 97
-        y: 24
-        width: 26
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 98
+        y: 25
+        width: 25
+        height: 36
+      alignment: 9
+      pivot: {x: 0.224805, y: 0.19577715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8cd66694e575a244ae0117d29c76fc0
+      spriteID: 127f4666fc4f7754b9845c2535931f51
       internalID: 4413611308527420052
       vertices: []
       indices: 
