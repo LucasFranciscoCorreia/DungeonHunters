@@ -5600,5 +5600,35 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4286769409691412870, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286769409691412870, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286769409691412870, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286769409444089314, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 190322151}
+    - target: {fileID: 4286769409691412869, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: field of view
+      value: 88.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286769409691412869, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 432ec9bb1b2721c4eb5f173146931f10, type: 3}
