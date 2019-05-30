@@ -15,6 +15,8 @@ public class hero_script : MonoBehaviour
     public float timeAttack;
     public float startTimeAttack;
     public SpriteRenderer weapon;
+    public int keys1_collected;
+    public int keys2_collected;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,9 @@ public class hero_script : MonoBehaviour
         health.numHearts = 3;
         isPaused = false;
         startTimeAttack = 1;
+        keys1_collected=0;
+        keys2_collected=0;
+
     }
 
     // Update is called once per frame
@@ -117,5 +122,22 @@ public class hero_script : MonoBehaviour
             Destroy(collision.gameObject);
             health.BigPotionPickUp();
         }
+        else if(collision.CompareTag("obj2"))
+        {
+            Destroy(collision.gameObject);
+            keys2_collected=keys2_collected+1;
+        }
+        else if(collision.CompareTag("obj1"))
+        {
+            Destroy(collision.gameObject);
+            keys1_collected=keys1_collected+1;
+        }
+        else if(collision.CompareTag("portal"))
+        {
+            if(keys1_collected>=2&&keys2_collected>=2){
+                Debug.Log("Passando para a proxima fase!!!");
+            }
+        }
+
     }
 }
