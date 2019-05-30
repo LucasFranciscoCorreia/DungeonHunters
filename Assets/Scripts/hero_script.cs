@@ -12,7 +12,8 @@ public class hero_script : MonoBehaviour
     public bool rightTurned;
     public Health health;
     public bool isPaused;
-    
+    public float timeAttack;
+    public float startTimeAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class hero_script : MonoBehaviour
         health = GetComponent<Health>();
         health.numHearts = 3;
         isPaused = false;
+        startTimeAttack = 1;
     }
 
     // Update is called once per frame
@@ -33,6 +35,8 @@ public class hero_script : MonoBehaviour
         if (!PauseMenu.isPaused)
         {
             var isWalking = false;
+            var isAttacking = false;
+            var isAbleAttack = true;
             float hori = 0, vert = 0;
             if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
             {
@@ -67,13 +71,32 @@ public class hero_script : MonoBehaviour
                     rightTurned = false;
                 }
             }
+            if(timeAttack <= 0)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    Debug.Log("Attacked");
+                    timeAttack = startTimeAttack;
+                    isAbleAttack = false;
+                }
+                else
+                {
+                    timeAttack = 0;
+                    isAbleAttack = true;
+                }
+            }
+            else
+            {
+                timeAttack -= Time.deltaTime;
+                isAbleAttack = false;
+            }
 
-            if (Input.GetKeyDown(KeyCode.Space))
-                health.TakeDamage(1);
             if (health.health == 0)
                 SceneManager.LoadScene("GameOver");
 
             animator.SetBool("isWalking", isWalking);
+            animator.SetBool("isAbleAttack", isAbleAttack);
+            animator.SetBool("isAttacking", !isAbleAttack);
         }
     }
 
