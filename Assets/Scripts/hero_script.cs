@@ -8,15 +8,18 @@ public class hero_script : MonoBehaviour
     public float speed;
     private Rigidbody2D body;
     private Animator animator;
-    private SpriteRenderer sr;
     public bool rightTurned;
     public Health health;
     public bool isPaused;
     public float timeAttack;
     public float startTimeAttack;
     public SpriteRenderer weapon;
+    public Transform attackPos;
+    public float attackRangeX, attackRangeY;
     public int keys1_collected;
     public int keys2_collected;
+    public LayerMask enemieLayer;
+    public int damage;
 
     // Start is called before the first frame update
     void Start()
@@ -25,14 +28,13 @@ public class hero_script : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         rightTurned = true;
-        sr = GetComponent<SpriteRenderer>();
         health = GetComponent<Health>();
         health.numHearts = 3;
         isPaused = false;
-        startTimeAttack = 1;
+        startTimeAttack = 0.3f;
         keys1_collected=0;
         keys2_collected=0;
-
+        damage = 1;
     }
 
     // Update is called once per frame
@@ -64,17 +66,21 @@ public class hero_script : MonoBehaviour
                 }
                 var move = new Vector3(hori, vert, 0);
                 body.MovePosition(new Vector2((transform.position.x + move.x * speed * Time.deltaTime), (transform.position.y + move.y * speed * Time.deltaTime)));
+                Vector3 scale = transform.localScale;
                 if (hori > 0 && !rightTurned)
                 {
-                    sr.flipX = false;
-                    weapon.flipX = false;
                     rightTurned = true;
+                    scale.x = 1;
+                    transform.localScale = scale;
+                    //weapon.flipX = false;
                 }
                 else if (hori < 0 && rightTurned)
                 {
-                    sr.flipX = true;
-                    weapon.flipX = true;
+                    
                     rightTurned = false;
+                    scale.x = -1;
+                    transform.localScale = scale;
+//a                    weapon.flipX = true;
                 }
             }
             if(timeAttack <= 0)
@@ -83,6 +89,11 @@ public class hero_script : MonoBehaviour
                 {
                     timeAttack = startTimeAttack;
                     isAbleAttack = false;
+                    Collider2D[] enemies = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY),0, enemieLayer);
+                    for(int i = 0; i < enemies.Length; i++)
+                    {
+                        enemies[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                    }
                 }
                 else
                 {
@@ -138,6 +149,11 @@ public class hero_script : MonoBehaviour
                 Debug.Log("Passando para a proxima fase!!!");
             }
         }
+    }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(attackPos.position,new Vector3(attackRangeX, attackRangeY,1));
     }
 }
