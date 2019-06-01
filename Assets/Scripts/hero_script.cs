@@ -5,19 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class hero_script : MonoBehaviour
 {
-    public float speed;
     private Rigidbody2D body;
     private Animator animator;
-    public bool rightTurned;
-    public Health health;
-    public bool isPaused;
-    public float timeAttack;
+    private bool rightTurned;
+    private Health health;
+    private float timeAttack;
+    private SpriteRenderer weapon;
+    private int keys1_collected;
+    private int keys2_collected;
+    
+    public float speed;
     public float startTimeAttack;
-    public SpriteRenderer weapon;
     public Transform attackPos;
     public float attackRangeX, attackRangeY;
-    public int keys1_collected;
-    public int keys2_collected;
     public LayerMask enemieLayer;
     public int damage;
 
@@ -30,7 +30,6 @@ public class hero_script : MonoBehaviour
         rightTurned = true;
         health = GetComponent<Health>();
         health.numHearts = 3;
-        isPaused = false;
         startTimeAttack = 0.3f;
         keys1_collected=0;
         keys2_collected=0;
