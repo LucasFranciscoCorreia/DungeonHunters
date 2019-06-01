@@ -11,6 +11,7 @@ public class Grid : MonoBehaviour
     public Node[,] grid;
     public Tilemap walk;
 
+    public Transform enemy;
     public float nodeDiam;
     public int gridX, gridY;
     private void Start()
@@ -35,20 +36,38 @@ public class Grid : MonoBehaviour
                     grid[i, j] = new Node(true, worldPoint);
                 else
                     grid[i, j] = new Node(false, worldPoint);
-                //Debug.Log(walk.GetTile(new Vector3Int(Mathf.RoundToInt(worldPoint.x), Mathf.RoundToInt(worldPoint.y), Mathf.RoundToInt(worldPoint.z))));
-                Debug.Log(new Vector3Int(Mathf.RoundToInt(Mathf.Floor(worldPoint.x)), Mathf.RoundToInt(Mathf.Floor(worldPoint.y)), Mathf.RoundToInt(Mathf.Floor(worldPoint.z))));
-
             }
         }
+    }
+
+    public Node NodeFromWorldPoint(Vector3 worldPos) 
+    {
+
+        float percentX = (Mathf.Floor(worldPos.x) + gridWorld.x / 2) / gridWorld.x;
+        float percentY = (Mathf.Floor(worldPos.y) + gridWorld.y / 2) / gridWorld.y;
+        percentX = Mathf.Clamp01(percentX);
+        percentY = Mathf.Clamp01(percentY);
+        
+        Debug.Log(percentX + " " + percentY);
+
+        int x = Mathf.RoundToInt((gridX - 1) * percentX);
+        int y = Mathf.RoundToInt((gridY - 1) * percentY);
+        return grid[x, y];
     }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(gridWorld.x, gridWorld.y, 1));
         if (grid != null)
         {
+            Node enemyNode = NodeFromWorldPoint(enemy.position);
             foreach (Node n in grid)
             {
+                
                 Gizmos.color = (n.walkable) ? Color.green : Color.red;
+                if(enemyNode == n)
+                {
+                    Gizmos.color = Color.white;
+                }
                 Gizmos.DrawCube(n.pos, Vector2.one * (nodeDiam - .1f));
             }
         }
