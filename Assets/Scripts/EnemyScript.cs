@@ -10,6 +10,7 @@ public class EnemyScript : MonoBehaviour
     private Pathfinding.AIDestinationSetter pathfind;
     private bool rightTurned;
     private Animator animator;
+    public Animator weaponAnimator;
 
     public GameObject target;
 
@@ -19,6 +20,7 @@ public class EnemyScript : MonoBehaviour
 
     public Transform attackPos;
     public float attackRangeX, attackRangeY;
+    public bool isAbleAttack = true;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +54,7 @@ public class EnemyScript : MonoBehaviour
     {
         var distance = Vector3.Distance(transform.position, target.GetComponent<Transform>().position);
         var isWalking = false;
+        //var isAbleAttack = true;
         if(distance < 10 && distance > 1.5)
         {
             var x = transform.position.x;
@@ -72,24 +75,39 @@ public class EnemyScript : MonoBehaviour
             pathfind.target = target.GetComponent<Transform>();
             isWalking = true;
         }
-        else 
+        else
         {
-            if(distance < 1.5)
-            {
-                if(timeAttack <= 0)
-                {
-                    timeAttack = startTimeAttack;
-                    Collider2D[] player = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, playerLayer);
-                    player[0].GetComponent<Health>().TakeDamage(1);
-                }  
-                else
-                {
-                    timeAttack -= Time.deltaTime;
-                }
-            }
             pathfind.target = null;
         }
+
+        if (timeAttack <= 0)
+        {
+            if(distance < 1.5 && isAbleAttack)
+            {
+                timeAttack = startTimeAttack;
+                Collider2D[] player = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, playerLayer);
+                player[0].GetComponent<Health>().TakeDamage(1);
+                isAbleAttack = false;
+                weaponAnimator.SetBool("isAttacking", true);
+            }
+            else
+            {
+                isAbleAttack = true;
+                weaponAnimator.SetBool("isAttacking", false);
+            }
+        }
+        else
+        {
+            timeAttack -= Time.deltaTime;
+            isAbleAttack = false;
+            weaponAnimator.SetBool("isAttacking", false);
+        }
+        
+        
         animator.SetBool("isWalking", isWalking);
+        
+        
+        Debug.Log(isAbleAttack);
     }
     private void OnDrawGizmosSelected()
     {

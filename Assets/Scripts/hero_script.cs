@@ -96,7 +96,7 @@ public class hero_script : MonoBehaviour
                 }
                 else
                 {
-                    timeAttack = 0;
+                   
                     isAbleAttack = true;
                 }
             }
