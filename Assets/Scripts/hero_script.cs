@@ -105,10 +105,6 @@ public class hero_script : MonoBehaviour
                 timeAttack -= Time.deltaTime;
                 isAbleAttack = false;
             }
-
-            if (health.health == 0)
-                SceneManager.LoadScene("GameOver");
-
             animator.SetBool("isWalking", isWalking);
             animator.SetBool("isAbleAttack", isAbleAttack);
             animator.SetBool("isAttacking", !isAbleAttack);

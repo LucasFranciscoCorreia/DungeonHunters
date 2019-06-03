@@ -1,28 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class Health : MonoBehaviour
 {
     public int numHearts;
     public int health;
+    public float time;
+    public float damageTime;
 
     private void Start()
     {
         health = 2 * numHearts;
-        //health = 1;
     }
 
     private void Update()
     {
-        
+        if (time > 0)
+            time -= Time.deltaTime;
+        if(health <= 0)
+            SceneManager.LoadScene("GameOver");
     }
 
     public void TakeDamage(int damage)
     {
-        if (health - damage > 0)
-            health -= damage;
-        else
-            health = 0;
+        if (time <= 0)
+        {
+            if (health - damage > 0)
+                health -= damage;
+            else
+                health = 0;
+
+            time = damageTime;
+        }
     }
 
     public void HealthPickUp()
