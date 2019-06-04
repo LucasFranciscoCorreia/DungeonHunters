@@ -13,8 +13,7 @@ public class hero_script : MonoBehaviour
     private SpriteRenderer weapon;
     private int keys1_collected;
     private int keys2_collected;
-
-    public Animator weaponAnimator;
+    
     public float speed;
     public float startTimeAttack;
     public Transform attackPos;
@@ -94,20 +93,22 @@ public class hero_script : MonoBehaviour
                     {
                         enemies[i].GetComponent<EnemyHealth>().TakeDamage(damage);
                     }
-                    weaponAnimator.SetBool("isAttacking", true);
                 }
                 else
                 {
-                    weaponAnimator.SetBool("isAttacking", false);
+                   
+                    isAbleAttack = true;
                 }
             }
             else
             {
                 timeAttack -= Time.deltaTime;
-                weaponAnimator.SetBool("isAttacking", false);
+                isAbleAttack = false;
             }
             animator.SetBool("isWalking", isWalking);
+            animator.SetBool("isAbleAttack", isAbleAttack);
             body.velocity = new Vector2(0, 0);
+            animator.SetBool("isAttacking", !isAbleAttack);
         }
     }
 
