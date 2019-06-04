@@ -108,7 +108,6 @@ public class EnemyScript : MonoBehaviour
         
         
         body.velocity = new Vector2(0,0);
-        Debug.Log(isAbleAttack);
     }
     private void OnDrawGizmosSelected()
     {
