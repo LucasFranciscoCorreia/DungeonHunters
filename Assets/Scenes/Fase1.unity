@@ -51236,12 +51236,12 @@ PrefabInstance:
     - target: {fileID: 4979368675825585613, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -65.1
+      value: -67.12
       objectReference: {fileID: 0}
     - target: {fileID: 4979368675825585613, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -64.5
+      value: -19.85
       objectReference: {fileID: 0}
     - target: {fileID: 4979368675825585613, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
@@ -51251,27 +51251,27 @@ PrefabInstance:
     - target: {fileID: 1071159386521476334, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 67.12
       objectReference: {fileID: 0}
     - target: {fileID: 1071159386521476334, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 19.85
       objectReference: {fileID: 0}
     - target: {fileID: 1071159386521476334, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.09
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1071159386521476331, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: field of view
-      value: 88.35
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1071159386521476331, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1071159385191095957, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
@@ -51468,5 +51468,15 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 442141912}
+    - target: {fileID: 1071159386853045917, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: closedDoor
+      value: 
+      objectReference: {fileID: 888195445}
+    - target: {fileID: 1071159386853045917, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: openedDoor
+      value: 
+      objectReference: {fileID: 121600521}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 432ec9bb1b2721c4eb5f173146931f10, type: 3}
