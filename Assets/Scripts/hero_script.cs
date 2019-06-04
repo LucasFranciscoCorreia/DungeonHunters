@@ -24,7 +24,7 @@ public class hero_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 5f;
+        speed = 2.5f;
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         rightTurned = true;
