@@ -200,12 +200,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &149901910 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2158689229945902796, guid: 432ec9bb1b2721c4eb5f173146931f10,
-    type: 3}
-  m_PrefabInstance: {fileID: 2158689228742267910}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &190322149
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,12 +376,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!95 &421453967 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4662796035874773582, guid: 432ec9bb1b2721c4eb5f173146931f10,
-    type: 3}
-  m_PrefabInstance: {fileID: 2158689228742267910}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &681841564
 GameObject:
   m_ObjectHideFlags: 0
@@ -7104,54 +7092,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 2158689228989264620, guid: 432ec9bb1b2721c4eb5f173146931f10,
-        type: 3}
-      propertyPath: weaponAnimator
-      value: 
-      objectReference: {fileID: 421453967}
-    - target: {fileID: 2158689228989264620, guid: 432ec9bb1b2721c4eb5f173146931f10,
-        type: 3}
-      propertyPath: startTimeAttack
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158689228989264620, guid: 432ec9bb1b2721c4eb5f173146931f10,
-        type: 3}
-      propertyPath: attackPos
-      value: 
-      objectReference: {fileID: 149901910}
-    - target: {fileID: 2158689228989264620, guid: 432ec9bb1b2721c4eb5f173146931f10,
-        type: 3}
-      propertyPath: attackRangeX
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158689228989264620, guid: 432ec9bb1b2721c4eb5f173146931f10,
-        type: 3}
-      propertyPath: attackRangeY
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158689228989264620, guid: 432ec9bb1b2721c4eb5f173146931f10,
-        type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158689228989264620, guid: 432ec9bb1b2721c4eb5f173146931f10,
-        type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158689229320657050, guid: 432ec9bb1b2721c4eb5f173146931f10,
-        type: 3}
-      propertyPath: field of view
-      value: 88.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158689229320657050, guid: 432ec9bb1b2721c4eb5f173146931f10,
-        type: 3}
-      propertyPath: orthographic size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158689229508090596, guid: 432ec9bb1b2721c4eb5f173146931f10,
-=======
     - target: {fileID: 1071159386521476334, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7178,7 +7118,6 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1071159385191095957, guid: 432ec9bb1b2721c4eb5f173146931f10,
->>>>>>> master
         type: 3}
       propertyPath: m_BoundingShape2D
       value: 
