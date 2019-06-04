@@ -28,7 +28,7 @@ public class hero_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 5f;
+        speed = 2.5f;
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         rightTurned = true;
@@ -97,17 +97,17 @@ public class hero_script : MonoBehaviour
                     {
                         enemies[i].GetComponent<EnemyHealth>().TakeDamage(damage);
                     }
-                    weaponAnimator.SetBool("isAttacking", true);
                 }
                 else
                 {
-                    weaponAnimator.SetBool("isAttacking", false);
+                   
+                    isAbleAttack = true;
                 }
             }
             else
             {
                 timeAttack -= Time.deltaTime;
-                weaponAnimator.SetBool("isAttacking", false);
+                isAbleAttack = false;
             }
 
             if (keys1_collected >= 2 && keys2_collected >= 2)
@@ -116,7 +116,9 @@ public class hero_script : MonoBehaviour
                 openedDoor.SetActive(true);
             }
             animator.SetBool("isWalking", isWalking);
+            animator.SetBool("isAbleAttack", isAbleAttack);
             body.velocity = new Vector2(0, 0);
+            animator.SetBool("isAttacking", !isAbleAttack);
         }
     }
 

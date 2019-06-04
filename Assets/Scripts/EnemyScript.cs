@@ -27,8 +27,8 @@ public class EnemyScript : MonoBehaviour
     {
     
         target = GameObject.FindGameObjectWithTag("Player");
-        body = GetComponent<Rigidbody2D>();
-        health = GetComponent<EnemyHealth>();
+        body = this.GetComponent<Rigidbody2D>();
+        this.health = GetComponent<EnemyHealth>();
         pathfind = GetComponent<Pathfinding.AIDestinationSetter>();
         health.numHearts = 2;
         var x = transform.position.x;
