@@ -50,7 +50,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         var distance = Vector3.Distance(transform.position, target.GetComponent<Transform>().position);
         var isWalking = false;
