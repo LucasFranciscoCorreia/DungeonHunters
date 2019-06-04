@@ -11,9 +11,12 @@ public class hero_script : MonoBehaviour
     private Health health;
     private float timeAttack;
     private SpriteRenderer weapon;
-    private int keys1_collected;
-    private int keys2_collected;
 
+    public int keys1_collected;
+    public int keys2_collected;
+
+
+    public GameObject closedDoor, openedDoor;
     public Animator weaponAnimator;
     public float speed;
     public float startTimeAttack;
@@ -106,6 +109,12 @@ public class hero_script : MonoBehaviour
                 timeAttack -= Time.deltaTime;
                 weaponAnimator.SetBool("isAttacking", false);
             }
+
+            if (keys1_collected >= 2 && keys2_collected >= 2)
+            {
+                closedDoor.SetActive(true);
+                openedDoor.SetActive(true);
+            }
             animator.SetBool("isWalking", isWalking);
             body.velocity = new Vector2(0, 0);
         }
@@ -131,19 +140,14 @@ public class hero_script : MonoBehaviour
         else if(collision.CompareTag("obj2"))
         {
             Destroy(collision.gameObject);
-            keys2_collected=keys2_collected+1;
+            keys2_collected++;
         }
         else if(collision.CompareTag("obj1"))
         {
             Destroy(collision.gameObject);
-            keys1_collected=keys1_collected+1;
+            keys1_collected++;
         }
-        else if(collision.CompareTag("portal"))
-        {
-            if(keys1_collected>=2&&keys2_collected>=2){
-                Debug.Log("Passando para a proxima fase!!!");
-            }
-        }
+    
     }
 
     private void OnDrawGizmosSelected()
