@@ -88,7 +88,6 @@ public class EnemyScript : MonoBehaviour
                 Collider2D[] player = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, playerLayer);
                 player[0].GetComponent<Health>().TakeDamage(1);
                 isAbleAttack = false;
-                FindObjectOfType<AudioManager>().Play("porrada");
                 weaponAnimator.SetBool("isAttacking", true);
             }
             else

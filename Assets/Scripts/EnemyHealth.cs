@@ -16,7 +16,6 @@ public class EnemyHealth : MonoBehaviour
     {
         if(health <= 0)
         {
-            FindObjectOfType<AudioManager>().Play("inimigoMorreu");
             Destroy(gameObject);
         }
     }
