@@ -50,7 +50,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         var distance = Vector3.Distance(transform.position, target.GetComponent<Transform>().position);
         var isWalking = false;
@@ -82,7 +82,7 @@ public class EnemyScript : MonoBehaviour
 
         if (timeAttack <= 0)
         {
-            if(distance < 1.5 && isAbleAttack)
+            if (distance < 1.5 && isAbleAttack)
             {
                 timeAttack = startTimeAttack;
                 Collider2D[] player = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, playerLayer);
@@ -97,7 +97,7 @@ public class EnemyScript : MonoBehaviour
             }
         }
         else
-        {
+        { 
             timeAttack -= Time.deltaTime;
             isAbleAttack = false;
             weaponAnimator.SetBool("isAttacking", false);
@@ -107,6 +107,7 @@ public class EnemyScript : MonoBehaviour
         animator.SetBool("isWalking", isWalking);
         
         
+        body.velocity = new Vector2(0,0);
         Debug.Log(isAbleAttack);
     }
     private void OnDrawGizmosSelected()

@@ -37,7 +37,7 @@ public class hero_script : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!PauseMenu.isPaused)
         {
@@ -107,6 +107,7 @@ public class hero_script : MonoBehaviour
             }
             animator.SetBool("isWalking", isWalking);
             animator.SetBool("isAbleAttack", isAbleAttack);
+            body.velocity = new Vector2(0, 0);
             animator.SetBool("isAttacking", !isAbleAttack);
         }
     }
