@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 2692906284439294002}
   - component: {fileID: 2692906284439294003}
   - component: {fileID: 2692906284439294012}
-  - component: {fileID: 3013037784812891548}
   m_Layer: 11
   m_Name: Necromancer
   m_TagString: Enemy
@@ -34,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2692906284439294013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.2097225, y: 9.33, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2692906284514000863}
@@ -135,6 +134,7 @@ MonoBehaviour:
   attackRangeX: 1
   attackRangeY: 1.5
   isAbleAttack: 1
+  maxDistance: 7.5
 --- !u!114 &2692906284439294007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +149,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numHearts: 3
   health: 0
+  audio: {fileID: 0}
+  drops:
+  - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
+  - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
+  - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
+  spawn: {fileID: 0}
 --- !u!61 &2692906284439294000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -272,22 +278,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!70 &3013037784812891548
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2692906284439294013}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.030428648, y: -0.091285706}
-  m_Size: {x: 0.7768569, y: 1.0674286}
-  m_Direction: 0
 --- !u!1 &2692906284514000856
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class EnemyScript : MonoBehaviour
     public Transform attackPos;
     public float attackRangeX, attackRangeY;
     public bool isAbleAttack = true;
+    public float maxDistance;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class EnemyScript : MonoBehaviour
         var x = transform.position.x;
         var targetx = target.GetComponent<Transform>().position.x;
         Vector3 scale = transform.localScale;
+
         if (x - targetx > 0 && !rightTurned)
         {
             rightTurned = true;
@@ -54,7 +56,7 @@ public class EnemyScript : MonoBehaviour
         var distance = Vector3.Distance(transform.position, target.GetComponent<Transform>().position);
         var isWalking = false;
         //var isAbleAttack = true;
-        if(distance < 10 && distance > 1.5)
+        if(distance < maxDistance && distance > 1.5)
         {
             var x = transform.position.x;
             var targetx = target.GetComponent<Transform>().position.x;

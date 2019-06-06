@@ -89,9 +89,9 @@ public class hero_script : MonoBehaviour
                     isAbleAttack = false;
                     //FindObjectOfType<AudioManager>().Play("porrada");
                     Collider2D[] enemies = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY),0, enemieLayer);
-                    Debug.Log(enemies.Length);
                     for(int i = 0; i < enemies.Length; i++)
                     {
+                        Debug.Log(enemies[i]);
                         enemies[i].GetComponent<EnemyHealth>().TakeDamage(damage);
                     }
                 }

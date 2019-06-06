@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+
     void Awake()
     {
         foreach (Sound s in sounds)
@@ -24,7 +25,16 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.source.Play();
+        foreach(Sound sound in sounds)
+        {
+            Debug.Log(sound.name + " == " + name + "?");
+            Debug.Log(sound.name.Equals(name));
+            if (sound.name.Equals(name))
+            {
+                sound.source.Play();
+                break;
+            }
+        }
+        Debug.Log("#############################");
     }
 }
