@@ -19,7 +19,9 @@ public class Health : MonoBehaviour
     {
         if (time > 0)
             time -= Time.deltaTime;
-        if(health <= 0)
+        if (health <= 4)
+            FindObjectOfType<AudioManager>().Play("playerMorrendo");
+        if (health <= 0)
             SceneManager.LoadScene("GameOver");
     }
 

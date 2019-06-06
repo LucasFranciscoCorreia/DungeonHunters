@@ -21,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if(health <= 0)
         {
-            //audio.Play("inimigoMorre");
+            FindObjectOfType<AudioManager>().Play("inimigoMorre");
             var randomNumber = Random.Range(1, 101);
             var pos = this.transform.position;
 
