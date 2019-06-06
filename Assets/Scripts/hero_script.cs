@@ -11,12 +11,9 @@ public class hero_script : MonoBehaviour
     private Health health;
     private float timeAttack;
     private SpriteRenderer weapon;
+    
+    public Fase1Script fase1;
 
-    public int keys1_collected;
-    public int keys2_collected;
-
-
-    public GameObject closedDoor, openedDoor;
     public Animator weaponAnimator;
     public float speed;
     public float startTimeAttack;
@@ -34,9 +31,7 @@ public class hero_script : MonoBehaviour
         rightTurned = true;
         health = GetComponent<Health>();
         health.numHearts = 3;
-        startTimeAttack = 0.3f;
-        keys1_collected=0;
-        keys2_collected=0;
+        startTimeAttack = 0.5f;
         damage = 1;
     }
 
@@ -92,8 +87,9 @@ public class hero_script : MonoBehaviour
                 {
                     timeAttack = startTimeAttack;
                     isAbleAttack = false;
-                    FindObjectOfType<AudioManager>().Play("porrada");
+                    //FindObjectOfType<AudioManager>().Play("porrada");
                     Collider2D[] enemies = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY),0, enemieLayer);
+                    Debug.Log(enemies.Length);
                     for(int i = 0; i < enemies.Length; i++)
                     {
                         enemies[i].GetComponent<EnemyHealth>().TakeDamage(damage);
@@ -111,11 +107,6 @@ public class hero_script : MonoBehaviour
                 isAbleAttack = false;
             }
 
-            if (keys1_collected >= 2 && keys2_collected >= 2)
-            {
-                closedDoor.SetActive(true);
-                openedDoor.SetActive(true);
-            }
             animator.SetBool("isWalking", isWalking);
             animator.SetBool("isAbleAttack", isAbleAttack);
             body.velocity = new Vector2(0, 0);
@@ -143,12 +134,12 @@ public class hero_script : MonoBehaviour
         else if(collision.CompareTag("obj2"))
         {
             Destroy(collision.gameObject);
-            keys2_collected++;
+            this.fase1.GotKey1();
         }
         else if(collision.CompareTag("obj1"))
         {
             Destroy(collision.gameObject);
-            keys1_collected++;
+            this.fase1.GotKey2();
         }
     
     }

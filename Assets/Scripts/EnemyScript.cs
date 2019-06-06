@@ -11,7 +11,6 @@ public class EnemyScript : MonoBehaviour
     private bool rightTurned;
     private Animator animator;
     public Animator weaponAnimator;
-
     public GameObject target;
 
     public LayerMask playerLayer;
@@ -108,7 +107,6 @@ public class EnemyScript : MonoBehaviour
         
         
         body.velocity = new Vector2(0,0);
-        Debug.Log(isAbleAttack);
     }
     private void OnDrawGizmosSelected()
     {

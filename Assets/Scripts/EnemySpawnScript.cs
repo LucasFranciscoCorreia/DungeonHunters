@@ -17,6 +17,7 @@ public class EnemySpawnScript : MonoBehaviour
             var j = Random.Range(0, enemies.Length);
             var x = Random.Range(0, 2);
             var y = Random.Range(0, 2);
+            Debug.Log(pos[i].position);
             spawns.Add(Instantiate(enemies[j], pos[i]));
         }
     }
