@@ -4,9 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
+    LevelChangerScript lcs;
+    public void Start()
+    {
+        lcs = FindObjectOfType<LevelChangerScript>();
+    }
     public void PlayGame()
     {
-        SceneManager.LoadScene("Fase1");
+        lcs.FadeToLevel("Fase1");
     }
 
     public void QuitGame()
