@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class EnemyScript : MonoBehaviour
     private bool rightTurned;
     private Animator animator;
     public Animator weaponAnimator;
+
     public GameObject target;
 
     public LayerMask playerLayer;
@@ -86,9 +88,6 @@ public class EnemyScript : MonoBehaviour
             if (distance < 1.5 && isAbleAttack)
             {
                 timeAttack = startTimeAttack;
-                Collider2D[] player = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, playerLayer);
-                player[0].GetComponent<Health>().TakeDamage(1);
-                isAbleAttack = false;
                 weaponAnimator.SetBool("isAttacking", true);
             }
             else
@@ -114,5 +113,12 @@ public class EnemyScript : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY, 1));
+    }
+
+    public void DealDamage()
+    {
+        Collider2D[] player = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, playerLayer);
+        player[0].GetComponent<Health>().TakeDamage(1);
+        isAbleAttack = false;
     }
 }

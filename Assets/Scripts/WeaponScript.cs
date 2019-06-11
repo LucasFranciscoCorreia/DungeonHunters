@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-    
-
+    public GameObject owner;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void DealDamage()
     {
-        if (collision.CompareTag("Enemy"))
-        {
-            //collision.gameObject.h
-            Debug.Log("acerto mizeravi");
-        }
-        Debug.Log("Triggered");
+        owner.GetComponent<EnemyScript>().DealDamage();
     }
 }
