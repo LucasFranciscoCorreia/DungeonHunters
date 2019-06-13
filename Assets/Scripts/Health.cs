@@ -13,15 +13,18 @@ public class Health : MonoBehaviour
     private void Start()
     {
         health = 2 * numHearts;
+        damageTime = 1;
     }
 
     private void Update()
     {
         if (time > 0)
             time -= Time.deltaTime;
-        if (health <= 4)
-            FindObjectOfType<AudioManager>().Play("playerMorrendo");
+        //        if (health <= 4)
+        //FindObjectOfType<AudioManager>().Play("playerMorrendo");
+        //else
         if (health <= 0)
+        
             SceneManager.LoadScene("GameOver");
     }
 

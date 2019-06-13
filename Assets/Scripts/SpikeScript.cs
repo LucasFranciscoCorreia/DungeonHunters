@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpikeScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     public BoxCollider2D box;
     void Start()
     {
@@ -16,5 +15,13 @@ public class SpikeScript : MonoBehaviour
     void Update()
     {
         Debug.Log("here we go");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<Health>().TakeDamage(1);
+        }
     }
 }
