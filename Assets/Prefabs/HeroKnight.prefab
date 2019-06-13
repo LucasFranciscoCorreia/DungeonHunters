@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1071159384719895350}
   - component: {fileID: 1071159384719895351}
   - component: {fileID: 1071159384719895368}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Resume Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1071159384820519613}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 1071159384833706516}
   - component: {fileID: 1071159384833706517}
   - component: {fileID: 1071159384833706518}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 1071159384842655494}
   - component: {fileID: 1071159384842655493}
   - component: {fileID: 1071159384842655492}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Heart8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 1071159384846976544}
   - component: {fileID: 1071159384846976558}
   - component: {fileID: 1071159384846976559}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 1071159384898906177}
   - component: {fileID: 1071159384898906176}
   - component: {fileID: 1071159384898906191}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Heart5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 1071159384903227196}
   - component: {fileID: 1071159384903227195}
   - component: {fileID: 1071159384903227194}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Heart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 1071159385026029520}
   - component: {fileID: 1071159385026029534}
   - component: {fileID: 1071159385026029535}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 1071159385175358955}
   - component: {fileID: 1071159385175358954}
   - component: {fileID: 1071159385175358953}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Heart3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 1071159385191095958}
   - component: {fileID: 1071159385191095956}
   - component: {fileID: 1071159385191095957}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: CM vcam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 1071159385238698962}
   - component: {fileID: 1071159385238698963}
   - component: {fileID: 1071159385238698964}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Options Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -925,7 +925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1071159385319724984}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: HealthContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +973,7 @@ GameObject:
   - component: {fileID: 1071159385338945058}
   - component: {fileID: 1071159385338945059}
   - component: {fileID: 1071159385338945060}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1081,6 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb26405137ee1be4697dfca9b5de3705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
 --- !u!1 &1071159385384357229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1093,7 @@ GameObject:
   - component: {fileID: 1071159385384357228}
   - component: {fileID: 1071159385384357226}
   - component: {fileID: 1071159385384357227}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,7 +1172,7 @@ GameObject:
   - component: {fileID: 1071159385467362909}
   - component: {fileID: 1071159385467362908}
   - component: {fileID: 1071159385467362907}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Heart7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1245,7 +1246,7 @@ GameObject:
   - component: {fileID: 1071159385686746189}
   - component: {fileID: 1071159385686746188}
   - component: {fileID: 1071159385686746187}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Heart9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1319,7 +1320,7 @@ GameObject:
   - component: {fileID: 1071159386283505915}
   - component: {fileID: 1071159386283505913}
   - component: {fileID: 1071159386283505914}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1396,7 +1397,7 @@ GameObject:
   - component: {fileID: 1071159386293495296}
   - component: {fileID: 1071159386293495297}
   - component: {fileID: 1071159386293495298}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Heart10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1470,7 +1471,7 @@ GameObject:
   - component: {fileID: 1071159386317129387}
   - component: {fileID: 1071159386317129385}
   - component: {fileID: 1071159386317129386}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1553,7 +1554,7 @@ GameObject:
   - component: {fileID: 1071159386364484965}
   - component: {fileID: 1071159386364484964}
   - component: {fileID: 1071159386364484963}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Heart4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1627,7 +1628,7 @@ GameObject:
   - component: {fileID: 1071159386425725823}
   - component: {fileID: 1071159386425725822}
   - component: {fileID: 1071159386425725821}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Heart6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1702,7 +1703,7 @@ GameObject:
   - component: {fileID: 1071159386521476331}
   - component: {fileID: 1071159386521476332}
   - component: {fileID: 1071159386521476333}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1717,7 +1718,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071159386521476335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.7, y: -6.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -9.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4979368675825585613}
@@ -1748,9 +1749,9 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 88.35
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1817,7 +1818,7 @@ GameObject:
   - component: {fileID: 1071159386522296803}
   - component: {fileID: 1071159386522296804}
   - component: {fileID: 1071159386522296805}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1948,7 +1949,7 @@ GameObject:
   - component: {fileID: 1071159386579460554}
   - component: {fileID: 1071159386579460553}
   - component: {fileID: 1071159386579460552}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Heart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2024,7 +2025,7 @@ GameObject:
   - component: {fileID: 1071159386830456365}
   - component: {fileID: 1071159386830456366}
   - component: {fileID: 1071159386830456367}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2140,7 +2141,7 @@ GameObject:
   - component: {fileID: 1071159386853045918}
   - component: {fileID: 1071159386853045919}
   - component: {fileID: 1071159386853045904}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HeroKnight
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2268,18 +2269,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99cf6b1c90631b2459e018d63454557e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fase1: {fileID: 0}
+  weaponAnimator: {fileID: 0}
   speed: 0
-  rightTurned: 1
-  health: {fileID: 0}
-  isPaused: 0
-  timeAttack: 0
   startTimeAttack: 0.3
-  weapon: {fileID: 1071159385338945058}
   attackPos: {fileID: 1071159384820519613}
   attackRangeX: 1.5
   attackRangeY: 2.5
-  keys1_collected: 0
-  keys2_collected: 0
   enemieLayer:
     serializedVersion: 2
     m_Bits: 2048
@@ -2298,6 +2294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numHearts: 3
   health: 0
+  time: 0
+  damageTime: 0
 --- !u!114 &1071159386853045919
 MonoBehaviour:
   m_ObjectHideFlags: 0
