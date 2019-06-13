@@ -40,13 +40,13 @@ public class EnemyScript : MonoBehaviour
         if (x - targetx > 0 && !rightTurned)
         {
             rightTurned = true;
-            scale.x = -1;
+            scale.x = -scale.x;
             transform.localScale = scale;
         }
         else if (x - targetx < 0 && rightTurned)
         {
             rightTurned = false;
-            scale.x = 1;
+            scale.x = -scale.x;
             transform.localScale = scale;
         }
         animator = GetComponent<Animator>();
@@ -66,13 +66,15 @@ public class EnemyScript : MonoBehaviour
             if (x - targetx > 0 && !rightTurned)
             {
                 rightTurned = true;
-                scale.x = -1;
+                scale.x = -scale.x;
+                Debug.Log(scale);
                 transform.localScale = scale;
             }
             else if(x-targetx < 0 && rightTurned)
             {
                 rightTurned = false;
-                scale.x = 1;
+                scale.x = -scale.x;
+                Debug.Log(scale);
                 transform.localScale = scale;
             }
             pathfind.target = target.GetComponent<Transform>();
