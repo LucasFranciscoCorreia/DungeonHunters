@@ -1,31 +1,29 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour
+public class MagicEnemyScript : MonoBehaviour
 {
-    
+
     private Rigidbody2D body;
     private EnemyHealth health;
     private Pathfinding.AIDestinationSetter pathfind;
     private bool rightTurned;
     private Animator animator;
+    private GameObject target;
 
-    public Animator weaponAnimator;
-    public GameObject target;
+    public GameObject spell;
+    public GameObject currentSpell;
     public LayerMask playerLayer;
     public float timeAttack;
     public float startTimeAttack;
     public Transform attackPos;
-    public float attackRangeX, attackRangeY;
     public bool isAbleAttack = true;
     public float maxDistance;
+    public float minDistance;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
         this.target = GameObject.FindGameObjectWithTag("Player");
         this.body = this.GetComponent<Rigidbody2D>();
         this.health = GetComponent<EnemyHealth>();
@@ -54,24 +52,9 @@ public class EnemyScript : MonoBehaviour
     {
         var distance = Vector3.Distance(transform.position, target.GetComponent<Transform>().position);
         var isWalking = false;
-        //var isAbleAttack = true;
-        if(distance < maxDistance && distance > 1.5)
+    
+        if (distance < maxDistance && distance > minDistance)
         {
-            var x = transform.position.x;
-            var targetx = target.GetComponent<Transform>().position.x;
-            Vector3 scale = transform.localScale;
-            if (x - targetx > 0 && !rightTurned)
-            {
-                rightTurned = true;
-                scale.x = -scale.x;
-                transform.localScale = scale;
-            }
-            else if(x-targetx < 0 && rightTurned)
-            {
-                rightTurned = false;
-                scale.x = -scale.x;
-                transform.localScale = scale;
-            }
             pathfind.target = target.GetComponent<Transform>();
             isWalking = true;
         }
@@ -80,42 +63,45 @@ public class EnemyScript : MonoBehaviour
             pathfind.target = null;
         }
 
+        var x = transform.position.x;
+        var targetx = target.GetComponent<Transform>().position.x;
+        Vector3 scale = transform.localScale;
+
+        if (x - targetx > 0 && !rightTurned)
+        {
+            rightTurned = true;
+            scale.x = -scale.x;
+            transform.localScale = scale;
+        }
+        else if (x - targetx < 0 && rightTurned)
+        {
+            rightTurned = false;
+            scale.x = -scale.x;
+            transform.localScale = scale;
+        }
+
         if (timeAttack <= 0)
         {
-            if (distance < 1.5 && isAbleAttack)
+            if (distance <= minDistance && this.currentSpell == null)
             {
                 timeAttack = startTimeAttack;
-                weaponAnimator.SetBool("isAttacking", true);
+                this.currentSpell = Instantiate(spell, attackPos.position, attackPos.rotation);
             }
             else
             {
                 isAbleAttack = true;
-                weaponAnimator.SetBool("isAttacking", false);
             }
         }
         else
-        { 
+        {
             timeAttack -= Time.deltaTime;
             isAbleAttack = false;
-            weaponAnimator.SetBool("isAttacking", false);
         }
-        
-        
-        animator.SetBool("isWalking", isWalking);
-        
-        
-        body.velocity = new Vector2(0,0);
-    }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY, 1));
-    }
 
-    public void DealDamage()
-    {
-        Collider2D[] player = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, playerLayer);
-        player[0].GetComponent<Health>().TakeDamage(1);
-        isAbleAttack = false;
+
+        animator.SetBool("isWalking", isWalking);
+
+
+        body.velocity = new Vector2(0, 0);
     }
 }

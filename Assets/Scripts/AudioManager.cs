@@ -27,14 +27,11 @@ public class AudioManager : MonoBehaviour
     {
         foreach(Sound sound in sounds)
         {
-            Debug.Log(sound.name + " == " + name + "?");
-            Debug.Log(sound.name.Equals(name));
             if (sound.name.Equals(name))
             {
                 sound.source.Play();
                 break;
             }
         }
-        Debug.Log("#############################");
     }
 }
