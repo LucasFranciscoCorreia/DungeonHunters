@@ -33,8 +33,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3550736537116047772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -68.07, y: -22.87, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512695681696509247}
   - {fileID: 1692434513325680572}
@@ -107,7 +107,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.0625}
+    oldSize: {x: 2, y: 2.125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -136,8 +136,8 @@ MonoBehaviour:
   timeAttack: 0
   startTimeAttack: 1
   attackPos: {fileID: 4512695681696509247}
-  attackRangeX: 2
-  attackRangeY: 3
+  attackRangeX: 1
+  attackRangeY: 1.5
   isAbleAttack: 1
   maxDistance: 3
 --- !u!114 &5222405738194616123
