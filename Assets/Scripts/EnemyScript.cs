@@ -8,8 +8,8 @@ public class EnemyScript : MonoBehaviour
     
     private Rigidbody2D body;
     private EnemyHealth health;
-    private Pathfinding.AIDestinationSetter pathfind;
-    private bool rightTurned;
+    public Pathfinding.AIDestinationSetter pathfind;
+    public bool rightTurned;
     private Animator animator;
 
     public Animator weaponAnimator;
