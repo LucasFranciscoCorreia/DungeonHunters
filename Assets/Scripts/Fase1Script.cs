@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fase1Script : MonoBehaviour
 {
@@ -8,13 +9,19 @@ public class Fase1Script : MonoBehaviour
     public int keys2;
 
     public GameObject[] keys;
-
+    private int i;
     public GameObject closedDoor, openedDoor;
+    public BoxCollider2D collider;
     
     void Start()
     {
+        i = 0;
         keys1 = 0;
         keys2 = 0;
+        for (int i = 1; i < keys.Length; i++) {
+            keys[i].SetActive(false);
+        }
+        collider.enabled = false;
     }
 
     // Update is called once per frame
@@ -24,16 +31,31 @@ public class Fase1Script : MonoBehaviour
         {
             closedDoor.SetActive(true);
             openedDoor.SetActive(true);
+            collider.enabled = true;
         }
     }
 
     public void GotKey1()
     {
         this.keys1++;
+        if(i < 3)
+            keys[++i].SetActive(true);    
     }
 
     public void GotKey2()
     {
         this.keys2++;
+        if (i < 3)
+            keys[++i].SetActive(true);
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.tag)
+        {
+            case "Player":
+                SceneManager.LoadScene("Fase2");
+                break;
+        }
     }
 }

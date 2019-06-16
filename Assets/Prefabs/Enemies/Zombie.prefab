@@ -115,7 +115,7 @@ MonoBehaviour:
   attackRangeX: 1
   attackRangeY: 1.5
   isAbleAttack: 1
-  maxDistance: 2
+  maxDistance: 7
 --- !u!114 &3578278935554208622
 MonoBehaviour:
   m_ObjectHideFlags: 0

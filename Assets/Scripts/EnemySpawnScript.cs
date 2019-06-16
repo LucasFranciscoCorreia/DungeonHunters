@@ -17,10 +17,11 @@ public class EnemySpawnScript : MonoBehaviour
         for (int i = 0; i < n; i++)
         {
             var j = Random.Range(0, enemies.Length);
-            var x = Random.Range(0, 2);
-            var y = Random.Range(0, 2);
+            var x = Random.Range(-2, 2);
+            var y = Random.Range(-2, 2);
             Debug.Log(pos[i].position);
             spawns[i] = Instantiate(enemies[j],pos[i]);
+            spawns[i].GetComponent<EnemyHealth>().isRespawnable = true;
         }
     }
 
@@ -32,6 +33,7 @@ public class EnemySpawnScript : MonoBehaviour
             {
                 var j = Random.Range(0, enemies.Length);
                 spawns[i] = Instantiate(enemies[j], pos[i]);
+                spawns[i].GetComponent<EnemyHealth>().isRespawnable = true;
             }
         }
     }
