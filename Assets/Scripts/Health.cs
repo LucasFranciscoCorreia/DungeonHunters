@@ -33,7 +33,8 @@ public class Health : MonoBehaviour
         if (time <= 0)
         {
             if (health - damage > 0)
-                health -= damage;
+                //    health -= damage;
+                Debug.Log("Damage Taken");
             else
                 health = 0;
 

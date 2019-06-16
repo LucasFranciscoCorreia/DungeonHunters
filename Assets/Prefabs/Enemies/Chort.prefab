@@ -243,6 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f33dadd79701884bb25a0b9e6d761b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathfind: {fileID: 0}
+  rightTurned: 0
   weaponAnimator: {fileID: 8151323369544098384}
   target: {fileID: 0}
   playerLayer:
@@ -270,7 +272,10 @@ MonoBehaviour:
   numHearts: 2
   health: 0
   audio: {fileID: 0}
-  drops: []
+  drops:
+  - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
+  - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
+  - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
   spawn: {fileID: 0}
 --- !u!95 &4585408528793819504
 Animator:

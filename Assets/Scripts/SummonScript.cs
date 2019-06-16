@@ -7,13 +7,16 @@ public class SummonScript : MonoBehaviour
 
     public Transform pos;
     private Animator anim;
+    private EnemyHealth health;
+    public SummonerScript summoner;
+    public int index;
 
     // Start is called before the first frame update
     void Start()
     {
         pos = transform;
-        pos = transform.MemberwiseClone();
         anim = GetComponent<Animator>();
+        health = GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -41,6 +44,12 @@ public class SummonScript : MonoBehaviour
             }
             pathfind.target = pos;
             anim.SetBool("isWalking",true);
+        }
+        switch (health.health)
+        {
+            case 1:
+                health.isRespawnable = false;
+                break;
         }
     }
 }

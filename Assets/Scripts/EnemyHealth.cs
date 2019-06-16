@@ -9,10 +9,10 @@ public class EnemyHealth : MonoBehaviour
     public AudioManager audio;
     public GameObject[] drops;
     public EnemySpawnScript spawn;
+    public bool isRespawnable;
 
     private void Start()
     {
-
         health = 2 * numHearts;
         spawn = FindObjectOfType<EnemySpawnScript>();
     }
@@ -29,18 +29,24 @@ public class EnemyHealth : MonoBehaviour
             {
                 drops[2].transform.position = pos;
                 Instantiate(drops[2]);
-            }else if(randomNumber <= 20)
+            }else if(randomNumber <= 25)
             {
                 drops[1].transform.position = pos;
                 Instantiate(drops[1]);
-            }else if(randomNumber <= 50)
+            }else if(randomNumber <= 80)
             {
                 drops[0].transform.position = pos;
                 Instantiate(drops[0]);
             }
-
+            if (isRespawnable)
+            {
+                spawn.CallNewOne();
+            }
+            else
+            {
+                GetComponent<SummonScript>().summoner.FreeSpace(GetComponent<SummonScript>().index);
+            }
             Destroy(gameObject);
-            spawn.CallNewOne();
         }
     }
 

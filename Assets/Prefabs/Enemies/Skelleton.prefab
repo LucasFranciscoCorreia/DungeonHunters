@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 160358106215521177}
   - component: {fileID: 160358106215521176}
-  - component: {fileID: 160358106215521183}
   - component: {fileID: 160358106215521178}
   - component: {fileID: 160358106215521152}
   - component: {fileID: 160358106215521159}
@@ -18,6 +17,7 @@ GameObject:
   - component: {fileID: 160358106215521157}
   - component: {fileID: 160358106215521156}
   - component: {fileID: 160358106215521179}
+  - component: {fileID: 5782050809596985755}
   m_Layer: 11
   m_Name: Skelleton
   m_TagString: Enemy
@@ -90,32 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &160358106215521183
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160358106215521182}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0.1875, y: 0, z: 0.1875, w: 0.125}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
-  m_EdgeRadius: 0
 --- !u!95 &160358106215521178
 Animator:
   serializedVersion: 3
@@ -168,6 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f33dadd79701884bb25a0b9e6d761b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathfind: {fileID: 0}
+  rightTurned: 0
   weaponAnimator: {fileID: 160358106342473296}
   target: {fileID: 0}
   playerLayer:
@@ -195,7 +171,10 @@ MonoBehaviour:
   numHearts: 2
   health: 0
   audio: {fileID: 0}
-  drops: []
+  drops:
+  - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
+  - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
+  - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
   spawn: {fileID: 0}
 --- !u!114 &160358106215521157
 MonoBehaviour:
@@ -275,6 +254,32 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
+--- !u!61 &5782050809596985755
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160358106215521182}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.1875, y: 0, z: 0.1875, w: 0.125}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &160358106297353738
 GameObject:
   m_ObjectHideFlags: 0

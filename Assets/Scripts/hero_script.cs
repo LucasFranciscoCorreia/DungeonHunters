@@ -91,7 +91,6 @@ public class hero_script : MonoBehaviour
                     Collider2D[] enemies = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY),0, enemieLayer);
                     for(int i = 0; i < enemies.Length; i++)
                     {
-                        Debug.Log(enemies[i]);
                         enemies[i].GetComponent<EnemyHealth>().TakeDamage(damage);
                     }
                 }
@@ -116,32 +115,29 @@ public class hero_script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("HealthUp") && (health.numHearts < 10 || health.health < 20))
+        switch (collision.gameObject.tag)
         {
-            Destroy(collision.gameObject);
-            health.HealthPickUp();
+            case "HealthUp":
+                Destroy(collision.gameObject);
+                health.HealthPickUp();
+                break;
+            case "SmallPotion":
+                Destroy(collision.gameObject);
+                health.SmallPotionPickUp();
+                break;
+            case "BigPotion":
+                Destroy(collision.gameObject);
+                health.BigPotionPickUp();
+                break;
+            case "obj1":
+                Destroy(collision.gameObject);
+                this.fase1.GotKey1();
+                break;
+            case "obj2":
+                Destroy(collision.gameObject);
+                this.fase1.GotKey2();
+                break;
         }
-        else if (collision.CompareTag("SmallPotion") && health.health < health.numHearts*2)
-        {
-            Destroy(collision.gameObject);
-            health.SmallPotionPickUp();
-        }
-        else if (collision.CompareTag("BigPotion") && health.health < health.numHearts*2)
-        {
-            Destroy(collision.gameObject);
-            health.BigPotionPickUp();
-        }
-        else if(collision.CompareTag("obj2"))
-        {
-            Destroy(collision.gameObject);
-            this.fase1.GotKey1();
-        }
-        else if(collision.CompareTag("obj1"))
-        {
-            Destroy(collision.gameObject);
-            this.fase1.GotKey2();
-        }
-    
     }
 
     private void OnDrawGizmosSelected()

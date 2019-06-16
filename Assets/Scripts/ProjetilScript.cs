@@ -21,7 +21,6 @@ public class ProjetilScript : MonoBehaviour
         this.angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 180;
         this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         this.time2Walk = 2;
-        Debug.Log(dir);
     }
 
     // Update is called once per frame

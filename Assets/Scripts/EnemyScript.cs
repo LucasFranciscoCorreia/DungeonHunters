@@ -115,7 +115,10 @@ public class EnemyScript : MonoBehaviour
     public void DealDamage()
     {
         Collider2D[] player = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, playerLayer);
-        player[0].GetComponent<Health>().TakeDamage(1);
+        foreach (Collider2D collider in player)
+        {
+            collider.gameObject.GetComponent<Health>().TakeDamage(1);
+        }
         isAbleAttack = false;
     }
 }

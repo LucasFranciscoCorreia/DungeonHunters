@@ -7,6 +7,8 @@ public class Fase1Script : MonoBehaviour
     public int keys1;
     public int keys2;
 
+    public GameObject[] keys;
+
     public GameObject closedDoor, openedDoor;
     
     void Start()
