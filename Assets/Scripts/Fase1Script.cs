@@ -12,7 +12,8 @@ public class Fase1Script : MonoBehaviour
     private int i;
     public GameObject closedDoor, openedDoor;
     public BoxCollider2D collider;
-    
+
+    public LevelChangerScript lcs;
     void Start()
     {
         i = 0;
@@ -22,6 +23,7 @@ public class Fase1Script : MonoBehaviour
             keys[i].SetActive(false);
         }
         collider.enabled = false;
+        lcs = FindObjectOfType<LevelChangerScript>();
     }
 
     // Update is called once per frame
@@ -54,7 +56,7 @@ public class Fase1Script : MonoBehaviour
         switch (collision.tag)
         {
             case "Player":
-                SceneManager.LoadScene("Fase2");
+                lcs.FadeToLevel("Fase2");
                 break;
         }
     }

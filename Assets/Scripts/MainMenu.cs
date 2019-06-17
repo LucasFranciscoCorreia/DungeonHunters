@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         lcs = FindObjectOfType<LevelChangerScript>();
     }
+
     public void PlayGame()
     {
         lcs.FadeToLevel("Fase1");

@@ -35,6 +35,11 @@ public class hero_script : MonoBehaviour
         damage = 1;
     }
 
+    public void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {
