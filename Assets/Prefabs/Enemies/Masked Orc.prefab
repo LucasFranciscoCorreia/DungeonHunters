@@ -165,6 +165,8 @@ MonoBehaviour:
   - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
   - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
   spawn: {fileID: 0}
+  isRespawnable: 0
+  isSummoner: 0
 --- !u!95 &6597300235229519476
 Animator:
   serializedVersion: 3
@@ -299,10 +301,10 @@ MonoBehaviour:
   currentSpell: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 1048576
   timeAttack: 0
   startTimeAttack: 2
   attackPos: {fileID: 8411318659182143751}
   isAbleAttack: 1
-  maxDistance: 10
-  minDistance: 0
+  maxDistance: 7
+  minDistance: 5

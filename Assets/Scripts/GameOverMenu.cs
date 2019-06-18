@@ -4,8 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameOverMenu : MonoBehaviour
 {
+
+    public LevelChangerScript lcs;
+
+    private void Start()
+    {
+        lcs = FindObjectOfType<LevelChangerScript>();
+    }
     public void ReturnMenu()
     {
-        SceneManager.LoadScene("Menu");
+        lcs.FadeToLevel("Menu");
+    }
+
+    public void PlayAgain()
+    {
+        lcs.FadeToLevel("Fase1");
     }
 }

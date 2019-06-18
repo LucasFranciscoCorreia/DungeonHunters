@@ -123,7 +123,7 @@ public class hero_script : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "HealthUp":
-                if (health.health < health.numHearts*2)
+                if (health.health < health.numHearts*2 || health.numHearts<10)
                 {
                     Destroy(collision.gameObject);
                     health.HealthPickUp();

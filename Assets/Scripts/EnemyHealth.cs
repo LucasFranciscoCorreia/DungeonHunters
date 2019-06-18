@@ -48,7 +48,7 @@ public class EnemyHealth : MonoBehaviour
                 if(!isSummoner)
                     GetComponent<SummonScript>().summoner.FreeSpace(GetComponent<SummonScript>().index);
             }
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

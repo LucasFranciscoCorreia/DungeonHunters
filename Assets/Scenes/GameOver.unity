@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29da9bec6b275964b8dad64cff617b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lcs: {fileID: 0}
 --- !u!1 &966349209
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +547,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 765850971}
-        m_MethodName: ReturnMenu
+        m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -610,7 +611,7 @@ PrefabInstance:
     - target: {fileID: 3939102999712904377, guid: 2e5ad3daf837a664a8fd78bcf7312e96,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3939102999712904380, guid: 2e5ad3daf837a664a8fd78bcf7312e96,
         type: 3}
