@@ -10,6 +10,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject[] drops;
     public EnemySpawnScript spawn;
     public bool isRespawnable;
+    public bool isSummoner;
 
     private void Start()
     {
@@ -40,13 +41,14 @@ public class EnemyHealth : MonoBehaviour
             }
             if (isRespawnable)
             {
-                spawn.CallNewOne();
+                spawn.CallNewOne(this.gameObject);
             }
             else
             {
-                GetComponent<SummonScript>().summoner.FreeSpace(GetComponent<SummonScript>().index);
+                if(!isSummoner)
+                    GetComponent<SummonScript>().summoner.FreeSpace(GetComponent<SummonScript>().index);
             }
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 

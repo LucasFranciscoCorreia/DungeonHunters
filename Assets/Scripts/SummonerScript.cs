@@ -21,7 +21,7 @@ public class SummonerScript : MonoBehaviour
             var x = Random.Range(-3, 3);
             var y = Random.Range(-3, 3);
             summoned[i] = Instantiate(summon, transform.position, transform.rotation);
-            summoned[i].transform.position = new Vector3(transform.position.x + x, transform.position.y, 0);
+            summoned[i].transform.position = new Vector3(transform.position.x + x, transform.position.y+y, 0);
             summoned[i].AddComponent<SummonScript>();
             summoned[i].GetComponent<SummonScript>().summoner = this;
             summoned[i].GetComponent<SummonScript>().index = i;
@@ -38,6 +38,7 @@ public class SummonerScript : MonoBehaviour
         {
             case 1:
                 health.isRespawnable = false;
+                health.isSummoner = true;
                 break;
         }
         if(length < tam)

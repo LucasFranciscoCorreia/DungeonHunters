@@ -13,28 +13,52 @@ public class EnemySpawnScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (n < pos.Length)
+            n = pos.Length;
+        int i;
         spawns = new GameObject[n];
-        for (int i = 0; i < n; i++)
+        for (i = 0; i < pos.Length; i++)
         {
             var j = Random.Range(0, enemies.Length);
             var x = Random.Range(-2, 2);
             var y = Random.Range(-2, 2);
-            Debug.Log(pos[i].position);
-            spawns[i] = Instantiate(enemies[j],pos[i]);
+            spawns[i] = (Instantiate(enemies[j], new Vector3(pos[i].position.x + x, pos[i].position.y + y, 0), pos[i].rotation));
             spawns[i].GetComponent<EnemyHealth>().isRespawnable = true;
+        }
+        for (; i < n; i++)
+        {
+            var j = Random.Range(0, enemies.Length);
+            var k = Random.Range(0, pos.Length);
+            var x = Random.Range(-2, 2);
+            var y = Random.Range(-2, 2);
+            spawns[i] = (Instantiate(enemies[j], new Vector3(pos[k].position.x + x, pos[k].position.y + y, 0), pos[k].rotation));
+            spawns[i].GetComponent<EnemyHealth>().isRespawnable = true;
+
         }
     }
 
-    public void CallNewOne()
+    public void CallNewOne(GameObject obj)
     {
-        for(int i = 0; i < n; i++)
+        int l = 0;
+        int i;
+        for(i = 0; i < spawns.Length;i++)
         {
-            if(spawns[i] == null)
+            if (spawns[i] == obj)
             {
-                var j = Random.Range(0, enemies.Length);
-                spawns[i] = Instantiate(enemies[j], pos[i]);
-                spawns[i].GetComponent<EnemyHealth>().isRespawnable = true;
+                spawns[i];
+                Destroy(obj);
+                break;
             }
         }
+        var x = Random.Range(-2, 2);
+        var y = Random.Range(-2, 2);
+        var j = Random.Range(0, enemies.Length);
+        var k = Random.Range(0, pos.Length);
+        var enemie = Instantiate(enemies[j], new Vector3(pos[k].position.x + x, pos[k].position.y + y, 0), pos[k].rotation);
+        enemie.GetComponent<EnemyHealth>().isRespawnable = true;
+        spawns.Add(enemie);
+        Debug.Log("Enemy spawned at position " + k);
+
     }
 }
+
