@@ -7,6 +7,7 @@ public class EnemySpawnScript : MonoBehaviour
     public Transform[] pos;
     public GameObject[] enemies;
     public GameObject[] spawns;
+
     
     public int n;
 
@@ -45,7 +46,7 @@ public class EnemySpawnScript : MonoBehaviour
         {
             if (spawns[i] == obj)
             {
-                spawns[i];
+                spawns[i] = null; ;
                 Destroy(obj);
                 break;
             }
@@ -56,7 +57,7 @@ public class EnemySpawnScript : MonoBehaviour
         var k = Random.Range(0, pos.Length);
         var enemie = Instantiate(enemies[j], new Vector3(pos[k].position.x + x, pos[k].position.y + y, 0), pos[k].rotation);
         enemie.GetComponent<EnemyHealth>().isRespawnable = true;
-        spawns.Add(enemie);
+        spawns[i] = enemie;
         Debug.Log("Enemy spawned at position " + k);
 
     }

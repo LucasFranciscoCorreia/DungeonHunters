@@ -1,17 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Fase1Script : MonoBehaviour
 {
     public int keys1;
     public int keys2;
 
-    public GameObject[] keys;
-    private int i;
     public GameObject closedDoor, openedDoor;
     public BoxCollider2D collider;
+
+    public GameObject[] keys;
+    private int i;
+
+    public Transform[] spots;
+    public List<int> positions;
+    public Text key1;
+    public Text key2;
 
     public LevelChangerScript lcs;
     void Start()
@@ -19,8 +25,18 @@ public class Fase1Script : MonoBehaviour
         i = 0;
         keys1 = 0;
         keys2 = 0;
+        while(positions.Count < 4)
+        {
+            int i = Random.Range(0, spots.Length);
+            if (!positions.Contains(i))
+            {
+                positions.Add(i);
+            }
+        }
+        keys[0].transform.position = spots[positions[0]].position;
         for (int i = 1; i < keys.Length; i++) {
             keys[i].SetActive(false);
+            keys[i].transform.position = spots[positions[i]].position;
         }
         collider.enabled = false;
         lcs = FindObjectOfType<LevelChangerScript>();
@@ -42,6 +58,16 @@ public class Fase1Script : MonoBehaviour
         this.keys1++;
         if(i < 3)
             keys[++i].SetActive(true);    
+
+        switch (keys1)
+        {
+            case 1:
+                key1.text = "1/2";
+                break;
+            case 2:
+                key1.text = "2/2";
+                break;
+        }
     }
 
     public void GotKey2()
@@ -49,6 +75,15 @@ public class Fase1Script : MonoBehaviour
         this.keys2++;
         if (i < 3)
             keys[++i].SetActive(true);
+        switch (keys2)
+        {
+            case 1:
+                key2.text = "1/2";
+                break;
+            case 2:
+                key2.text = "2/2";
+                break;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -61,3 +96,4 @@ public class Fase1Script : MonoBehaviour
         }
     }
 }
+

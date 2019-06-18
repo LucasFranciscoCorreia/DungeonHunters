@@ -123,16 +123,25 @@ public class hero_script : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "HealthUp":
-                Destroy(collision.gameObject);
-                health.HealthPickUp();
+                if (health.health < health.numHearts*2)
+                {
+                    Destroy(collision.gameObject);
+                    health.HealthPickUp();
+                }
                 break;
             case "SmallPotion":
-                Destroy(collision.gameObject);
-                health.SmallPotionPickUp();
+                if (health.health < health.numHearts*2)
+                {
+                    Destroy(collision.gameObject);
+                    health.SmallPotionPickUp();
+                }
                 break;
             case "BigPotion":
-                Destroy(collision.gameObject);
-                health.BigPotionPickUp();
+                if (health.health < health.numHearts*2)
+                {
+                    Destroy(collision.gameObject);
+                    health.BigPotionPickUp();
+                }
                 break;
             case "obj1":
                 Destroy(collision.gameObject);

@@ -10,10 +10,13 @@ public class Health : MonoBehaviour
     public float time;
     public float damageTime;
 
+    private LevelChangerScript lcs;
+
     private void Start()
     {
         health = 2 * numHearts;
         damageTime = 1;
+        lcs = FindObjectOfType<LevelChangerScript>();
     }
 
     private void Update()
@@ -24,8 +27,12 @@ public class Health : MonoBehaviour
         //FindObjectOfType<AudioManager>().Play("playerMorrendo");
         //else
         if (health <= 0)
-        
+        {
+            Destroy(this.gameObject);
+            //Time.timeScale = 0;
+            //lcs.FadeToLevel("GameOver");
             SceneManager.LoadScene("GameOver");
+        }
     }
 
     public void TakeDamage(int damage)
@@ -33,8 +40,7 @@ public class Health : MonoBehaviour
         if (time <= 0)
         {
             if (health - damage > 0)
-                //    health -= damage;
-                Debug.Log("Damage Taken");
+                health -= damage;
             else
                 health = 0;
 
