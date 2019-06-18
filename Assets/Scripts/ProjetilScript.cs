@@ -18,7 +18,7 @@ public class ProjetilScript : MonoBehaviour
         this.body = GetComponent<Rigidbody2D>();
         this.target = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Transform>();
         this.dir = (target.position - this.transform.position).normalized;
-        this.angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 180;
+        this.angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         this.time2Walk = 2;
     }
