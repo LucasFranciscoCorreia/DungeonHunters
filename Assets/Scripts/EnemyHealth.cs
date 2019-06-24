@@ -26,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
             var randomNumber = Random.Range(1, 101);
             var pos = this.transform.position;
 
-            if(randomNumber <= 5)
+            if(randomNumber <= 3)
             {
                 drops[2].transform.position = pos;
                 Instantiate(drops[2]);
