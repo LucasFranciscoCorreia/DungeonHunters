@@ -21,7 +21,8 @@ public class Fase2Script : MonoBehaviour
     public Text key2;
 
     public LevelChangerScript lcs;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         i = 0;
@@ -30,7 +31,7 @@ public class Fase2Script : MonoBehaviour
         while(positions.Count < 4)
         {
             int i = Random.Range(0, spots.Length);
-            if(positions.Contains(i))
+            if(!positions.Contains(i))
             {
                 positions.Add(i);
             }
