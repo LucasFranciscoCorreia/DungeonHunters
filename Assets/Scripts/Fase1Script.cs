@@ -18,6 +18,7 @@ public class Fase1Script : MonoBehaviour
     public List<int> positions;
     public Text key1;
     public Text key2;
+    public Text showDoor;
 
     public LevelChangerScript lcs;
     void Start()
@@ -25,6 +26,7 @@ public class Fase1Script : MonoBehaviour
         i = 0;
         keys1 = 0;
         keys2 = 0;
+        showDoor.enabled=false;
         while(positions.Count < 4)
         {
             int i = Random.Range(0, spots.Length);
@@ -48,6 +50,7 @@ public class Fase1Script : MonoBehaviour
             closedDoor.SetActive(true);
             openedDoor.SetActive(true);
             collider.enabled = true;
+            showDoor.enabled=true;
         }
     }
 
