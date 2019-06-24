@@ -33,8 +33,7 @@ public class Fase1Script : MonoBehaviour
                 positions.Add(i);
             }
         }
-        keys[0].transform.position = spots[positions[0]].position;
-        for (int i = 1; i < keys.Length; i++) {
+        for (int i = 0; i < keys.Length; i++) {
             keys[i].transform.position = spots[positions[i]].position;
         }
         collider.enabled = false;
