@@ -236,7 +236,7 @@ PrefabInstance:
     - target: {fileID: 1071159386521476334, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07201195
+      value: -0.07216072
       objectReference: {fileID: 0}
     - target: {fileID: 1071159386521476334, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
@@ -1244,7 +1244,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: bc85f77348b57934bab10b84d0e534f8, type: 3}
     volume: 1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: playerMorrendo
     clip: {fileID: 8300000, guid: efd636a377fe51446a7405d82c76103a, type: 3}
@@ -51186,15 +51186,6 @@ Tilemap:
       - {fileID: 21300000, guid: da2f1bc1d7ec1154fa6f780f958faced, type: 3}
       - {fileID: 21300000, guid: d06e7831019e1b743b023d307faa5871, type: 3}
       m_AnimationSpeed: 7.653346
-      m_AnimationTimeOffset: 0
-      m_IsLooping: 1
-  - first: {x: -108, y: -40, z: 0}
-    second:
-      m_AnimatedSprites:
-      - {fileID: 21300000, guid: 298f77387fd59b7429687be9665835c8, type: 3}
-      - {fileID: 21300000, guid: 307ba24f980f0b345a89ee6fdc32d1ff, type: 3}
-      - {fileID: 21300000, guid: e4ed0a33f0d05a949be477c5a1b21840, type: 3}
-      m_AnimationSpeed: 5.9723983
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -44, y: -35, z: 0}
