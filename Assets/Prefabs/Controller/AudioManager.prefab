@@ -80,3 +80,27 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: deathE1
+    clip: {fileID: 8300000, guid: e59561bc1fcedde47b37a812d0146c5c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: deathE2
+    clip: {fileID: 8300000, guid: 62a61214c7ba90144a0a8580892f6463, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: spike
+    clip: {fileID: 8300000, guid: 2f696a1595968574790390c5c7785eca, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: spike
+    clip: {fileID: 8300000, guid: 2f696a1595968574790390c5c7785eca, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
