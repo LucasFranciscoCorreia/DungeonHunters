@@ -35,7 +35,6 @@ public class Fase1Script : MonoBehaviour
         }
         keys[0].transform.position = spots[positions[0]].position;
         for (int i = 1; i < keys.Length; i++) {
-            keys[i].SetActive(false);
             keys[i].transform.position = spots[positions[i]].position;
         }
         collider.enabled = false;
@@ -56,9 +55,6 @@ public class Fase1Script : MonoBehaviour
     public void GotKey1()
     {
         this.keys1++;
-        if(i < 3)
-            keys[++i].SetActive(true);    
-
         switch (keys1)
         {
             case 1:
@@ -73,8 +69,6 @@ public class Fase1Script : MonoBehaviour
     public void GotKey2()
     {
         this.keys2++;
-        if (i < 3)
-            keys[++i].SetActive(true);
         switch (keys2)
         {
             case 1:

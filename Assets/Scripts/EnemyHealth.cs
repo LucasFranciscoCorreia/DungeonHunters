@@ -30,11 +30,11 @@ public class EnemyHealth : MonoBehaviour
             {
                 drops[2].transform.position = pos;
                 Instantiate(drops[2]);
-            }else if(randomNumber <= 40)
+            }else if(randomNumber <= 10)
             {
                 drops[1].transform.position = pos;
                 Instantiate(drops[1]);
-            }else
+            }else if(randomNumber <= 34)
             {
                 drops[0].transform.position = pos;
                 Instantiate(drops[0]);

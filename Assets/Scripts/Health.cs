@@ -23,14 +23,9 @@ public class Health : MonoBehaviour
     {
         if (time > 0)
             time -= Time.deltaTime;
-        //        if (health <= 4)
-        //FindObjectOfType<AudioManager>().Play("playerMorrendo");
-        //else
         if (health <= 0)
         {
             Destroy(this.gameObject);
-            //Time.timeScale = 0;
-            //lcs.FadeToLevel("GameOver");
             SceneManager.LoadScene("GameOver");
         }
     }

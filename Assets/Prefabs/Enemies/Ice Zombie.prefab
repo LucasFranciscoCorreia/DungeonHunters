@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b671129a2c9fe6b44a3d2949c1ef6232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numHearts: 2
+  numHearts: 1
   health: 0
   audio: {fileID: 0}
   drops:

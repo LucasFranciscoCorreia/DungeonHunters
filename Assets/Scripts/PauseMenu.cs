@@ -50,5 +50,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
         isPaused = false;
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
     }
 }
