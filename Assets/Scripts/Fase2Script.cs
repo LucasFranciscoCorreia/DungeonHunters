@@ -3,58 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Fase2Script : MonoBehaviour
+public class Fase2Script : FaseScript
 {
-
-    public int keys1;
-    public int keys2;
-
-    public GameObject closedDoor, openedDoor;
-    public BoxCollider2D collider;
-
-    public GameObject[] keys;
-    public int i;
-
-    public Transform[] spots;
-    public List<int> positions;
-    public Text key1;
-    public Text key2;
-
-    public LevelChangerScript lcs;
-
-
     void Start()
     {
-        i = 0;
-        keys1 = 0;
-        keys2 = 0;
-        while(positions.Count < 4)
-        {
-            int i = Random.Range(0, spots.Length);
-            if(!positions.Contains(i))
-            {
-                positions.Add(i);
-            }
-        }
-
-        for(int i = 0; i < keys.Length; i++)
-        {
-            keys[i].transform.position = spots[positions[i]].position;
-        }
-
-        collider.enabled = false;
-
-        lcs = FindObjectOfType<LevelChangerScript>();
-
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = new Vector3(39, -4.5f, 0);
+        player.GetComponent<hero_script>().fase = this;
         GameObject camera = GameObject.FindGameObjectWithTag("CinemachineConfiner");
         camera.GetComponent<Cinemachine.CinemachineVirtualCamera>().m_Follow = player.transform;
+        lcs = FindObjectOfType<LevelChangerScript>();
+        base.Start();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        switch (collision.tag)
+        {
+            case "Player":
+                lcs.FadeToLevel("Fase3");
+                break;
+        }
     }
+
 }

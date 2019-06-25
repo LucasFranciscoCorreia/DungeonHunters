@@ -12,6 +12,9 @@ public class SummonerScript : MonoBehaviour
     private int tam;
     public float time2Spawn;
     public float startTime2Spawn;
+    public MagicEnemyScript script;
+
+    public Transform spot;
     void Start()
     {
         summoned = new GameObject[length];
@@ -28,19 +31,38 @@ public class SummonerScript : MonoBehaviour
             avaliable[i] = false;
         }
         health = GetComponent<EnemyHealth>();
+        script = GetComponent<MagicEnemyScript>();
         tam = length;
     }
 
     // Update is called once per frame
     void Update()
     {
+        var distance = Vector3.Distance(this.transform.position,script.target.GetComponent<Transform>().position);
         switch (health.health)
         {
             case 1:
                 health.isRespawnable = false;
                 health.isSummoner = true;
                 break;
+            default:
+                break;
         }
+
+        if (distance > 10 && this.transform.position.x != spot.position.x && spot.position.y != transform.position.y)
+        {
+            this.transform.position = spot.position;
+            foreach (GameObject summon in summoned)
+            {
+                if (summon != null)
+                {
+                    var x = Random.Range(-3, 3);
+                    var y = Random.Range(-3, 3);
+                    summon.transform.position = new Vector3(transform.position.x + x, transform.position.y + y, 0);
+                }
+            }
+        }
+
         if(length < tam)
         {
             if (time2Spawn <= 0)

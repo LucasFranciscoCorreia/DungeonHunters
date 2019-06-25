@@ -12,7 +12,7 @@ public class hero_script : MonoBehaviour
     private float timeAttack;
     private SpriteRenderer weapon;
     
-    public Fase1Script fase1;
+    public FaseScript fase;
 
     public Animator weaponAnimator;
     public float speed;
@@ -75,7 +75,6 @@ public class hero_script : MonoBehaviour
                     rightTurned = true;
                     scale.x = 1;
                     transform.localScale = scale;
-                    //weapon.flipX = false;
                 }
                 else if (hori < 0 && rightTurned)
                 {
@@ -83,7 +82,6 @@ public class hero_script : MonoBehaviour
                     rightTurned = false;
                     scale.x = -1;
                     transform.localScale = scale;
-//a                    weapon.flipX = true;
                 }
             }
             if(timeAttack <= 0)
@@ -145,11 +143,11 @@ public class hero_script : MonoBehaviour
                 break;
             case "obj1":
                 Destroy(collision.gameObject);
-                this.fase1.GotKey1();
+                this.fase.GotKey1();
                 break;
             case "obj2":
                 Destroy(collision.gameObject);
-                this.fase1.GotKey2();
+                this.fase.GotKey2();
                 break;
         }
     }

@@ -22,6 +22,8 @@ public class EnemyScript : MonoBehaviour
     public bool isAbleAttack = true;
     public float maxDistance;
 
+    public int damage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -117,7 +119,7 @@ public class EnemyScript : MonoBehaviour
         Collider2D[] player = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, playerLayer);
         foreach (Collider2D collider in player)
         {
-            collider.gameObject.GetComponent<Health>().TakeDamage(1);
+            collider.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
         isAbleAttack = false;
     }

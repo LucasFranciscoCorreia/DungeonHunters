@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 160358106215521156}
   - component: {fileID: 160358106215521179}
   - component: {fileID: 5782050809596985755}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Skelleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 512
   timeAttack: 1
   startTimeAttack: 1
   attackPos: {fileID: 160358106297353739}
@@ -156,6 +156,7 @@ MonoBehaviour:
   attackRangeY: 1.5
   isAbleAttack: 1
   maxDistance: 7
+  damage: 1
 --- !u!114 &160358106215521158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,14 +169,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b671129a2c9fe6b44a3d2949c1ef6232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numHearts: 2
+  numHearts: 1
   health: 0
-  audio: {fileID: 0}
   drops:
   - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
   - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
   - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
   spawn: {fileID: 0}
+  isRespawnable: 0
+  isSummoner: 0
 --- !u!114 &160358106215521157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160358106297353739}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +324,7 @@ GameObject:
   - component: {fileID: 160358106342473297}
   - component: {fileID: 160358106342473296}
   - component: {fileID: 160358106342473303}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

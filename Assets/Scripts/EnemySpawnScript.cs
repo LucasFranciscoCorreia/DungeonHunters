@@ -40,7 +40,6 @@ public class EnemySpawnScript : MonoBehaviour
 
     public void CallNewOne(GameObject obj)
     {
-        int l = 0;
         int i;
         for(i = 0; i < spawns.Length;i++)
         {

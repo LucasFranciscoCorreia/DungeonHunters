@@ -10,10 +10,10 @@ public class MagicEnemyScript : MonoBehaviour
     private Pathfinding.AIDestinationSetter pathfind;
     private bool rightTurned;
     private Animator animator;
-    private GameObject target;
 
+
+    public GameObject target;
     public GameObject spell;
-    public GameObject currentSpell;
     public LayerMask playerLayer;
     public float timeAttack;
     public float startTimeAttack;
@@ -82,10 +82,10 @@ public class MagicEnemyScript : MonoBehaviour
 
         if (timeAttack <= 0)
         {
-            if (distance <= minDistance && this.currentSpell == null)
+            if (distance <= minDistance)
             {
                 timeAttack = startTimeAttack;
-                this.currentSpell = Instantiate(spell, attackPos.position, attackPos.rotation);
+                Instantiate(spell, attackPos.position, attackPos.rotation);
             }
             else
             {

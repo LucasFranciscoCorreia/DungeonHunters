@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6274130869672721852}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6274130869988234222}
   - component: {fileID: 6274130869988234220}
   - component: {fileID: 6274130869988234221}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6274130870562264024}
   - component: {fileID: 6274130870562264031}
-  - component: {fileID: 6274130870562264030}
   - component: {fileID: 6274130870562264029}
   - component: {fileID: 6274130870562264028}
   - component: {fileID: 6274130870562264019}
@@ -163,7 +162,8 @@ GameObject:
   - component: {fileID: 6274130870562264017}
   - component: {fileID: 6274130870562264016}
   - component: {fileID: 6274130870562264023}
-  m_Layer: 0
+  - component: {fileID: 1877659318845178663}
+  m_Layer: 8
   m_Name: OrcWarrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,32 +235,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6274130870562264030
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6274130870562264022}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.07419014, y: -0.14343548}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.25}
-    newSize: {x: 1, y: 1.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6735573, y: 0.96312904}
-  m_EdgeRadius: 0
 --- !u!114 &6274130870562264029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,14 +253,15 @@ MonoBehaviour:
   target: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 512
   timeAttack: 0
-  startTimeAttack: 1
+  startTimeAttack: 2
   attackPos: {fileID: 6274130869672721852}
   attackRangeX: 0.75
   attackRangeY: 1
   isAbleAttack: 1
   maxDistance: 6
+  damage: 2
 --- !u!114 &6274130870562264028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,8 +276,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numHearts: 2
   health: 0
-  audio: {fileID: 0}
-  drops: []
+  drops:
+  - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
+  - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
+  - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
   spawn: {fileID: 0}
   isRespawnable: 0
   isSummoner: 0
@@ -424,3 +401,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1877659318845178663
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6274130870562264022}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.08884621, y: -0.13644218}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.25}
+    newSize: {x: 1, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7080803, y: 0.97711563}
+  m_EdgeRadius: 0

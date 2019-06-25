@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5887833524655476223}
   - component: {fileID: 7188667028563650418}
   - component: {fileID: 2158304624143674820}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 512
   timeAttack: 0
   startTimeAttack: 1
   attackPos: {fileID: 5461647924941584165}
@@ -116,6 +116,7 @@ MonoBehaviour:
   attackRangeY: 1.5
   isAbleAttack: 1
   maxDistance: 7
+  damage: 1
 --- !u!114 &3578278935554208622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numHearts: 1
   health: 0
-  audio: {fileID: 0}
   drops:
   - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
   - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
@@ -291,7 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5461647924941584165}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 5780153578669465850}
   - component: {fileID: 6461235885453462767}
   - component: {fileID: 7742647515388021056}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

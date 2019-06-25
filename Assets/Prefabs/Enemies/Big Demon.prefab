@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1859322939127689938}
   - component: {fileID: 480918953512670308}
   - component: {fileID: 683334107756180831}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 6131015797171543381}
   - component: {fileID: 5471851994159525087}
   - component: {fileID: 4610134604556747552}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Big Demon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 512
   timeAttack: 0
   startTimeAttack: 1
   attackPos: {fileID: 8176937988664672907}
@@ -271,12 +271,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numHearts: 2
   health: 0
-  audio: {fileID: 0}
   drops:
   - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
   - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
   - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
   spawn: {fileID: 0}
+  isRespawnable: 0
+  isSummoner: 0
 --- !u!95 &4542823143009413333
 Animator:
   serializedVersion: 3
@@ -404,7 +405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8176937988664672907}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

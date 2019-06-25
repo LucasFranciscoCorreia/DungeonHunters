@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6678378517624321230}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 6678378517471589260}
   - component: {fileID: 6678378517471589261}
   - component: {fileID: 6678378517471589262}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Necromancer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -155,13 +155,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numHearts: 3
   health: 0
-  audio: {fileID: 0}
   drops:
   - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
   - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
   - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
   spawn: {fileID: 0}
   isRespawnable: 0
+  isSummoner: 0
 --- !u!61 &6678378517471589248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -297,8 +297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59faeeb6f8872043b266fae4bde0aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   spell: {fileID: 6872106946913307069, guid: ffbb09e379b3e5643b3b4b5553c2cbd4, type: 3}
-  currentSpell: {fileID: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 16384
@@ -327,3 +327,5 @@ MonoBehaviour:
   health: {fileID: 0}
   time2Spawn: 0
   startTime2Spawn: 2
+  script: {fileID: 0}
+  spot: {fileID: 0}

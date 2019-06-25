@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9115292820669396357}
   - component: {fileID: 8151323369544098384}
   - component: {fileID: 4453699943241643105}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 7633773507187330584}
   - component: {fileID: 1650327873928263750}
   - component: {fileID: 5589684158214429444}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Chort
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 512
   timeAttack: 0
   startTimeAttack: 1
   attackPos: {fileID: 7920721488843755384}
@@ -271,12 +271,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numHearts: 2
   health: 0
-  audio: {fileID: 0}
   drops:
   - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
   - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
   - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
   spawn: {fileID: 0}
+  isRespawnable: 0
+  isSummoner: 0
 --- !u!95 &4585408528793819504
 Animator:
   serializedVersion: 3
@@ -404,7 +405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7920721488843755384}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

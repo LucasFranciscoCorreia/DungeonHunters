@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1168255071504960547}
   - component: {fileID: 267544409786012744}
   - component: {fileID: 86748995977699025}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Ogre
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 512
   timeAttack: 0
   startTimeAttack: 1
   attackPos: {fileID: 6504596673464241273}
@@ -156,12 +156,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numHearts: 2
   health: 0
-  audio: {fileID: 0}
   drops:
   - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
   - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
   - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
   spawn: {fileID: 0}
+  isRespawnable: 0
+  isSummoner: 0
 --- !u!95 &1250152468510608242
 Animator:
   serializedVersion: 3
@@ -289,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6504596673464241273}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +323,7 @@ GameObject:
   - component: {fileID: 338201122609870102}
   - component: {fileID: 4574074801561226877}
   - component: {fileID: 2587102203712462544}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
