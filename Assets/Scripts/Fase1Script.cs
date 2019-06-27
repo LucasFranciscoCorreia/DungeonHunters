@@ -9,6 +9,8 @@ public class Fase1Script : FaseScript
     void Start()
     {
         lcs = FindObjectOfType<LevelChangerScript>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<hero_script>().fase = this;
         base.Start();
     }
 
