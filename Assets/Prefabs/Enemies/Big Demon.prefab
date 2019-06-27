@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1859322939127689938}
   - component: {fileID: 480918953512670308}
   - component: {fileID: 683334107756180831}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 6131015797171543381}
   - component: {fileID: 5471851994159525087}
   - component: {fileID: 4610134604556747552}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: Big Demon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -257,6 +257,7 @@ MonoBehaviour:
   attackRangeY: 1.5
   isAbleAttack: 1
   maxDistance: 3
+  damage: 0
 --- !u!114 &1643705445512946318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8176937988664672907}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

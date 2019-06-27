@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1168255071504960547}
   - component: {fileID: 267544409786012744}
   - component: {fileID: 86748995977699025}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: Ogre
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -142,6 +142,7 @@ MonoBehaviour:
   attackRangeY: 1.5
   isAbleAttack: 1
   maxDistance: 3
+  damage: 0
 --- !u!114 &5165030939891730477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6504596673464241273}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +324,7 @@ GameObject:
   - component: {fileID: 338201122609870102}
   - component: {fileID: 4574074801561226877}
   - component: {fileID: 2587102203712462544}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

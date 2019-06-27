@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 2669697847686952996}
   - component: {fileID: 8750282156867246004}
   - component: {fileID: 8948196043256297245}
-  - component: {fileID: 5769604223590394027}
-  m_Layer: 8
+  - component: {fileID: 361368251094500375}
+  m_Layer: 21
   m_Name: Ice Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1048576
   timeAttack: 0
   startTimeAttack: 1
   attackPos: {fileID: 8033982063228158707}
@@ -256,7 +256,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &5769604223590394027
+--- !u!61 &361368251094500375
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 4107292549864711319}
   - component: {fileID: 3961884320921199012}
   - component: {fileID: 4345269173039319944}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8033982063228158707}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

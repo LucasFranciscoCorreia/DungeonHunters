@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6274130869672721852}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6274130869988234222}
   - component: {fileID: 6274130869988234220}
   - component: {fileID: 6274130869988234221}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 6274130870562264016}
   - component: {fileID: 6274130870562264023}
   - component: {fileID: 1877659318845178663}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: OrcWarrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
