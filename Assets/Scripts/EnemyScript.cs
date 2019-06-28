@@ -19,7 +19,7 @@ public class EnemyScript : MonoBehaviour
     public float attackRangeX, attackRangeY;
     public bool isAbleAttack = true;
     public float maxDistance;
-
+    public float minDistance;
     public int damage;
 
     public bool isWalking;
@@ -57,18 +57,14 @@ public class EnemyScript : MonoBehaviour
         var distance = Vector3.Distance(transform.position, target.GetComponent<Transform>().position);
         //var isAbleAttack = true;
         isWalking = false;
-        if(distance < maxDistance && distance > 1.5)
+        if(distance < maxDistance)
         {
             Flip(target.transform);
-        }
-        else
-        {
-            pathfind.target = null;
         }
 
         if (timeAttack <= 0)
         {
-            if (distance < 1.5 && isAbleAttack)
+            if (distance < minDistance && isAbleAttack)
             {
                 timeAttack = startTimeAttack;
                 weaponAnimator.SetBool("isAttacking", true);
