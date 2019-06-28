@@ -261,7 +261,9 @@ MonoBehaviour:
   attackRangeY: 1
   isAbleAttack: 1
   maxDistance: 6
+  minDistance: 1.5
   damage: 2
+  isWalking: 0
 --- !u!114 &6274130870562264028
 MonoBehaviour:
   m_ObjectHideFlags: 0
