@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
@@ -23,6 +21,8 @@ public class EnemyScript : MonoBehaviour
     public float maxDistance;
 
     public int damage;
+
+    public bool isWalking;
 
     // Start is called before the first frame update
     void Start()
@@ -55,27 +55,11 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         var distance = Vector3.Distance(transform.position, target.GetComponent<Transform>().position);
-        var isWalking = false;
         //var isAbleAttack = true;
+        isWalking = false;
         if(distance < maxDistance && distance > 1.5)
         {
-            var x = transform.position.x;
-            var targetx = target.GetComponent<Transform>().position.x;
-            Vector3 scale = transform.localScale;
-            if (x - targetx > 0 && !rightTurned)
-            {
-                rightTurned = true;
-                scale.x = -scale.x;
-                transform.localScale = scale;
-            }
-            else if(x-targetx < 0 && rightTurned)
-            {
-                rightTurned = false;
-                scale.x = -scale.x;
-                transform.localScale = scale;
-            }
-            pathfind.target = target.GetComponent<Transform>();
-            isWalking = true;
+            Flip(target.transform);
         }
         else
         {
@@ -108,6 +92,28 @@ public class EnemyScript : MonoBehaviour
         
         body.velocity = new Vector2(0,0);
     }
+
+    public void Flip(Transform target)
+    {
+        var x = transform.position.x;
+        var targetx = target.GetComponent<Transform>().position.x;
+        Vector3 scale = transform.localScale;
+        if (x - targetx > 0 && !rightTurned)
+        {
+            rightTurned = true;
+            scale.x = -scale.x;
+            transform.localScale = scale;
+        }
+        else if (x - targetx < 0 && rightTurned)
+        {
+            rightTurned = false;
+            scale.x = -scale.x;
+            transform.localScale = scale;
+        }
+        pathfind.target = target.GetComponent<Transform>();
+        isWalking = true;
+    }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4620809700589270713}
   - component: {fileID: 1168255071504960547}
   - component: {fileID: 267544409786012744}
+  - component: {fileID: 6838074535236210973}
   - component: {fileID: 86748995977699025}
   - component: {fileID: 2305106414314070266}
   m_Layer: 8
@@ -110,7 +111,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   timeAttack: 0
-  startTimeAttack: 1
+  startTimeAttack: 3
   attackPos: {fileID: 6504596673464241273}
   attackRangeX: 1
   attackRangeY: 1.5
@@ -235,6 +236,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &6838074535236210973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908540599171874745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66757a056b24be54cb5a2b4a934696b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spots: []
+  patrolTime: 0
+  startPatrolTime: 0
+  script: {fileID: 0}
 --- !u!50 &86748995977699025
 Rigidbody2D:
   serializedVersion: 4
@@ -339,7 +356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7682613928381975418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.03, y: 0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 118191067743070967}
@@ -383,8 +400,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -3837932155035078651, guid: d9c12dfb9b425a2419918468c6cbb636,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d35c58b9ed07d24990960517ff8280d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -405,7 +421,7 @@ Animator:
   m_GameObject: {fileID: 7682613928381975418}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b6f89c0b6af9e5f469a036a2b1917c13, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7a2f8fb9f35b79f4fbc396603ad784aa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
