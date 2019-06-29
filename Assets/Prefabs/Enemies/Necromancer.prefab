@@ -162,6 +162,7 @@ MonoBehaviour:
   spawn: {fileID: 0}
   isRespawnable: 0
   isSummoner: 0
+  baseXp: 10
 --- !u!61 &6678378517471589248
 BoxCollider2D:
   m_ObjectHideFlags: 0

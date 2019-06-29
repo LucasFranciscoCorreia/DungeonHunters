@@ -285,6 +285,7 @@ MonoBehaviour:
   spawn: {fileID: 0}
   isRespawnable: 0
   isSummoner: 0
+  baseXp: 10
 --- !u!114 &6274130870562264019
 MonoBehaviour:
   m_ObjectHideFlags: 0

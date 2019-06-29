@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour
     public EnemySpawnScript spawn;
     public bool isRespawnable;
     public bool isSummoner;
-
+    public int baseXp;
     private void Start()
     {
         health = 2 * numHearts;
@@ -57,6 +57,7 @@ public class EnemyHealth : MonoBehaviour
                 }
             }
             Destroy(gameObject);
+            hero_script.AddXp(baseXp);
         }
     }
 

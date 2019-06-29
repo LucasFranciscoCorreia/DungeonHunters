@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     LevelChangerScript lcs;
     public void Start()
     {
+        PlayerPrefs.DeleteAll();
         lcs = FindObjectOfType<LevelChangerScript>();
     }
 
