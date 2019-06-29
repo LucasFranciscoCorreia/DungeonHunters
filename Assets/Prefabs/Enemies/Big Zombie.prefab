@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5438609593405232887}
   - component: {fileID: 4266955142768486926}
   - component: {fileID: 5788602197444759316}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: Big Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
   timeAttack: 0
   startTimeAttack: 1
   attackPos: {fileID: 4512695681696509247}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 5069531165877036117}
   - component: {fileID: 3256250840681372286}
   - component: {fileID: 3464621582537582946}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4512695681696509247}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

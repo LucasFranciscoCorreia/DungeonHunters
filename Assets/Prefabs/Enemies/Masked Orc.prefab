@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5500667101444015278}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 5500667102200351173}
   - component: {fileID: 5500667102200351174}
   - component: {fileID: 5500667102200351175}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: Masked Orc
   m_TagString: Enemy
   m_Icon: {fileID: 0}

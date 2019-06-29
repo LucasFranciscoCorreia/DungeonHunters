@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6678378517624321230}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 6678378517471589260}
   - component: {fileID: 6678378517471589261}
   - component: {fileID: 6678378517471589262}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: Necromancer
   m_TagString: Enemy
   m_Icon: {fileID: 0}

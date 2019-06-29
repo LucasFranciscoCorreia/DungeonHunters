@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5887833524655476223}
   - component: {fileID: 7188667028563650418}
   - component: {fileID: 2158304624143674820}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 1048576
+    m_Bits: 256
   timeAttack: 0
   startTimeAttack: 1
   attackPos: {fileID: 5461647924941584165}
@@ -293,7 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5461647924941584165}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 5780153578669465850}
   - component: {fileID: 6461235885453462767}
   - component: {fileID: 7742647515388021056}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

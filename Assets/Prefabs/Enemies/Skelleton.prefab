@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 160358106215521156}
   - component: {fileID: 160358106215521179}
   - component: {fileID: 5782050809596985755}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: Skelleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   target: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
   timeAttack: 1
   startTimeAttack: 1
   attackPos: {fileID: 160358106297353739}
@@ -293,7 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160358106297353739}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: attackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 160358106342473297}
   - component: {fileID: 160358106342473296}
   - component: {fileID: 160358106342473303}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
