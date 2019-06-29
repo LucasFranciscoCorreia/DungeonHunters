@@ -12,17 +12,26 @@ public class hero_script : MonoBehaviour
     public FaseScript fase;
 
     public Animator weaponAnimator;
-    public float speed;
+    private float speed;
+    public float speedWalk;
+    public float speedRun;
     public float startTimeAttack;
     public Transform attackPos;
     public float attackRangeX, attackRangeY;
     public LayerMask enemieLayer;
     public int damage;
 
+    public float maxStamina;
+    //public float attackCostStamina;
+    public float runCostStamina;
+    private float currentStamina;
+
+    public UIController UI;
+
     // Start is called before the first frame update
     void Start()
     {
-        speed = 2.5f;
+        //speed = 2.5f;
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         rightTurned = true;
@@ -30,6 +39,8 @@ public class hero_script : MonoBehaviour
         health.numHearts = 3;
         startTimeAttack = 0.5f;
         damage = 1;
+
+        currentStamina = maxStamina;
     }
 
     public void Awake()
@@ -40,29 +51,48 @@ public class hero_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UI.SetStamina(maxStamina, currentStamina);
         if (!PauseMenu.isPaused)
         {
             var isWalking = false;
             var isAbleAttack = true;
+            var isRunning = false;
+            var value = 1f;
             float hori = 0, vert = 0;
+            if (Input.GetKey(KeyCode.RightShift) && currentStamina > 0)
+            {
+                isRunning = true;
+                speed = speedRun;
+                value = 1.5f;
+                currentStamina -= runCostStamina;
+            }
+            if (currentStamina < 0)
+            {
+                currentStamina = 0;
+            }
             if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
             {
-                isWalking = true;
+                if (!isRunning)
+                {
+                    isWalking = true;
+                    isRunning = false;
+                    speed = speedWalk;
+                }
                 if (Input.GetKey(KeyCode.A))
                 {
-                    hori = -1;
+                    hori = -value;
                 }
                 else if (Input.GetKey(KeyCode.D))
                 {
-                    hori = 1;
+                    hori = value;
                 }
                 if (Input.GetKey(KeyCode.W))
                 {
-                    vert = 1;
+                    vert = value;
                 }
                 else if (Input.GetKey(KeyCode.S))
                 {
-                    vert = -1;
+                    vert = -value;
                 }
                 var move = new Vector3(hori, vert, 0);
                 body.MovePosition(new Vector2((transform.position.x + move.x * speed * Time.deltaTime), (transform.position.y + move.y * speed * Time.deltaTime)));
@@ -108,6 +138,7 @@ public class hero_script : MonoBehaviour
 
             animator.SetBool("isWalking", isWalking);
             animator.SetBool("isAbleAttack", isAbleAttack);
+            animator.SetBool("isRunning", isRunning);
             body.velocity = new Vector2(0, 0);
             animator.SetBool("isAttacking", !isAbleAttack);
         }

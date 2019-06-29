@@ -2109,9 +2109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99cf6b1c90631b2459e018d63454557e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fase1: {fileID: 0}
+  fase: {fileID: 0}
   weaponAnimator: {fileID: 0}
-  speed: 0
+  speedWalk: 2.5
+  speedRun: 3.5
   startTimeAttack: 0.3
   attackPos: {fileID: 1071159384820519613}
   attackRangeX: 1.5
