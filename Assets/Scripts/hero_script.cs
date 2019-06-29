@@ -93,8 +93,7 @@ public class hero_script : MonoBehaviour
                 {
                     vert = -value;
                 }
-                var move = new Vector3(hori, vert, 0);
-                body.MovePosition(new Vector2((transform.position.x + move.x * speed * Time.deltaTime), (transform.position.y + move.y * speed * Time.deltaTime)));
+                body.velocity = new Vector2((transform.position.x + hori * speed * Time.deltaTime), (transform.position.y + vert * speed * Time.deltaTime));
                 Vector3 scale = transform.localScale;
                 if (hori > 0 && !rightTurned)
                 {
@@ -137,7 +136,6 @@ public class hero_script : MonoBehaviour
 
             animator.SetBool("isWalking", isWalking);
             animator.SetBool("isAbleAttack", isAbleAttack);
-            animator.SetBool("isRunning", isRunning);
             body.velocity = new Vector2(0, 0);
             animator.SetBool("isAttacking", !isAbleAttack);
         }
