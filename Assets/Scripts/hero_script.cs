@@ -39,7 +39,6 @@ public class hero_script : MonoBehaviour
         health.numHearts = 3;
         startTimeAttack = 0.5f;
         damage = 1;
-
         currentStamina = maxStamina;
     }
 
@@ -51,7 +50,7 @@ public class hero_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UI.SetStamina(maxStamina, currentStamina);
+        //UI.SetStamina(maxStamina, currentStamina);
         if (!PauseMenu.isPaused)
         {
             var isWalking = false;
