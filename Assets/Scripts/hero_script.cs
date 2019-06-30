@@ -93,7 +93,7 @@ public class hero_script : MonoBehaviour
                 {
                     vert = -value;
                 }
-                body.velocity = new Vector2((transform.position.x + hori * speed * Time.deltaTime), (transform.position.y + vert * speed * Time.deltaTime));
+                body.MovePosition(new Vector2((transform.position.x + hori * speed * Time.deltaTime), (transform.position.y + vert * speed * Time.deltaTime)));
                 Vector3 scale = transform.localScale;
                 if (hori > 0 && !rightTurned)
                 {
