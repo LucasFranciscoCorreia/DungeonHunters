@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     public Slider sliderStamina;
+    public Text levelText;
 
     public void SetStamina(float maxStamina, float currentStamina)
     {
@@ -16,12 +17,12 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        levelText.text = hero_script.GetCurrentXp().ToString();
     }
 }

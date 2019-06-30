@@ -8,7 +8,9 @@ public class hero_script : MonoBehaviour
     private Health health;
     private float timeAttack;
     private SpriteRenderer weapon;
-    
+
+    public static hero_script instance;
+
     public FaseScript fase;
 
     public Animator weaponAnimator;
@@ -31,6 +33,7 @@ public class hero_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         //speed = 2.5f;
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
@@ -181,5 +184,16 @@ public class hero_script : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(attackPos.position,new Vector3(attackRangeX, attackRangeY,1));
+    }
+
+    public static void AddXp(float xp)
+    {
+        float newXp = GetCurrentXp() + xp;
+        PlayerPrefs.SetFloat("currentXp", newXp); 
+    }
+
+    public static float GetCurrentXp()
+    {
+        return PlayerPrefs.GetFloat("currentXp");
     }
 }
