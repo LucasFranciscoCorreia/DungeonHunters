@@ -53,7 +53,7 @@ public class hero_script : MonoBehaviour
     {
         if (!PauseMenu.isPaused)
         {
-            UI.SetStamina(maxStamina, currentStamina);
+            //UI.SetStamina(maxStamina, currentStamina);
             var isWalking = false;
             var isAbleAttack = true;
             float hori = 0, vert = 0;
@@ -92,7 +92,6 @@ public class hero_script : MonoBehaviour
                 {
                     vert = -1;
                 }
-                Debug.Log(speed);
                 body.MovePosition(new Vector2((transform.position.x + hori * speed * value * Time.deltaTime), (transform.position.y + vert * speed * value * Time.deltaTime)));
                 Vector3 scale = transform.localScale;
                 if (hori > 0 && !rightTurned)

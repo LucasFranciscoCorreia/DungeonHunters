@@ -47,7 +47,7 @@ public class SummonerScript : MonoBehaviour
                 break;
         }
 
-        if (distance > 10 && this.transform.position.x != spot.position.x && spot.position.y != transform.position.y)
+        if (distance > 10 && spot != null && this.transform.position.x != spot.position.x && spot.position.y != transform.position.y)
         {
             this.transform.position = spot.position;
             foreach (GameObject summon in summoned)

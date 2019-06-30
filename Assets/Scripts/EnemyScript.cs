@@ -81,11 +81,7 @@ public class EnemyScript : MonoBehaviour
             isAbleAttack = false;
             weaponAnimator.SetBool("isAttacking", false);
         }
-        
-        
         animator.SetBool("isWalking", isWalking);
-        
-        
         body.velocity = new Vector2(0,0);
     }
 

@@ -126,7 +126,6 @@ GameObject:
   - component: {fileID: 4926942068321166976}
   - component: {fileID: 2264465634657645397}
   - component: {fileID: 8890354911209904506}
-  - component: {fileID: 3584654438864424641}
   - component: {fileID: 4288431740706854129}
   - component: {fileID: 4585408528793819504}
   - component: {fileID: 821433155282971803}
@@ -231,35 +230,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
---- !u!114 &3584654438864424641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5600841341526712845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f33dadd79701884bb25a0b9e6d761b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathfind: {fileID: 0}
-  rightTurned: 0
-  weaponAnimator: {fileID: 8151323369544098384}
-  target: {fileID: 0}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  timeAttack: 0
-  startTimeAttack: 1
-  attackPos: {fileID: 7920721488843755384}
-  attackRangeX: 1
-  attackRangeY: 1.5
-  isAbleAttack: 1
-  maxDistance: 3
-  minDistance: 1.5
-  damage: 0
-  isWalking: 0
 --- !u!114 &4288431740706854129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,12 +242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b671129a2c9fe6b44a3d2949c1ef6232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numHearts: 2
+  numHearts: 3
   health: 0
   drops:
   - {fileID: 8441293844526725237, guid: 4f9a4470f62c7274495ef1f8a10c9d59, type: 3}
-  - {fileID: 4841843143407085660, guid: 392f6236eb3891141bf63cffa531d8f3, type: 3}
-  - {fileID: 3805460878290929314, guid: da0076bdb462db74493cf5e1f7c9cba4, type: 3}
   spawn: {fileID: 0}
   isRespawnable: 0
   isSummoner: 0
