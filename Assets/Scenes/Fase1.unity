@@ -231,12 +231,12 @@ PrefabInstance:
     - target: {fileID: 1071159386521476334, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.004814148
+      value: 70.271805
       objectReference: {fileID: 0}
     - target: {fileID: 1071159386521476334, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.072208405
+      value: 14.888853
       objectReference: {fileID: 0}
     - target: {fileID: 1071159386521476334, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
@@ -984,6 +984,9 @@ MonoBehaviour:
   key1: {fileID: 1368368348}
   key2: {fileID: 1239628194}
   showDoor: {fileID: 1862243034}
+  quest1Scratch: {fileID: 883589574}
+  quest1_1Scratch: {fileID: 1035820973}
+  quest1_2Scratch: {fileID: 1901146720}
 --- !u!4 &83504038
 Transform:
   m_ObjectHideFlags: 0
@@ -25117,7 +25120,7 @@ PrefabInstance:
     - target: {fileID: 3939102999712904377, guid: 2e5ad3daf837a664a8fd78bcf7312e96,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3939102999712904380, guid: 2e5ad3daf837a664a8fd78bcf7312e96,
         type: 3}
@@ -52882,6 +52885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136607125195748497, guid: 5433a19f7ce7c32439eac3bce985c191,
+        type: 3}
+      propertyPath: m_Name
+      value: NextFase
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5260091881006318962, guid: 5433a19f7ce7c32439eac3bce985c191, type: 3}

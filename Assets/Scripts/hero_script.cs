@@ -24,7 +24,7 @@ public class hero_script : MonoBehaviour
     public float maxStamina;
     //public float attackCostStamina;
     public float runCostStamina;
-    private float currentStamina;
+    public float currentStamina;
 
     public UIController UI;
 
@@ -58,12 +58,8 @@ public class hero_script : MonoBehaviour
             var isAbleAttack = true;
             float hori = 0, vert = 0;
             var value = 1f;
-            if (Input.GetKey(KeyCode.LeftShift) && currentStamina > 0)
-            {
-                value = 1.5f;
-                currentStamina -= 2*Time.deltaTime;
-            }
-            else if (currentStamina < maxStamina)
+
+            if (!Input.GetKey(KeyCode.LeftShift) && currentStamina < maxStamina)
             {
                 currentStamina += Time.deltaTime;
             }
@@ -75,6 +71,11 @@ public class hero_script : MonoBehaviour
             {
 
                 isWalking = true;
+                if (Input.GetKey(KeyCode.LeftShift) && currentStamina > 0)
+                {
+                    value = 1.5f;
+                    currentStamina -= 2 * Time.deltaTime;
+                }
 
                 if (Input.GetKey(KeyCode.A))
                 {

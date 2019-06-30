@@ -21,6 +21,8 @@ public class FaseScript : MonoBehaviour
     public Text key2;
     public Text showDoor;
 
+    public GameObject quest1Scratch, quest1_1Scratch, quest1_2Scratch;
+
     public void Start()
     {
         keys1 = 0;
@@ -49,6 +51,7 @@ public class FaseScript : MonoBehaviour
             openedDoor.SetActive(true);
             collider.enabled = true;
             showDoor.enabled = true;
+            quest1Scratch.SetActive(true);
         }
     }
 
@@ -62,6 +65,7 @@ public class FaseScript : MonoBehaviour
                 break;
             case 2:
                 key1.text = "2/2";
+                quest1_1Scratch.SetActive(true);
                 break;
         }
     }
@@ -76,6 +80,7 @@ public class FaseScript : MonoBehaviour
                 break;
             case 2:
                 key2.text = "2/2";
+                quest1_2Scratch.SetActive(true);
                 break;
         }
     }
