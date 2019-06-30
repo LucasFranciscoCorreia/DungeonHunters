@@ -173,7 +173,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.031665564, y: -0.09499633}
@@ -302,7 +302,7 @@ MonoBehaviour:
   spell: {fileID: 6872106946913307069, guid: ffbb09e379b3e5643b3b4b5553c2cbd4, type: 3}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 256
   timeAttack: 0
   startTimeAttack: 2
   attackPos: {fileID: 6678378517624321230}

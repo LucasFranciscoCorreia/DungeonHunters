@@ -53,7 +53,7 @@ public class hero_script : MonoBehaviour
     {
         if (!PauseMenu.isPaused)
         {
-            //UI.SetStamina(maxStamina, currentStamina);
+            UI.SetStamina(maxStamina, currentStamina);
             var isWalking = false;
             var isAbleAttack = true;
             float hori = 0, vert = 0;

@@ -125,13 +125,15 @@ GameObject:
   m_Component:
   - component: {fileID: 4926942068321166976}
   - component: {fileID: 2264465634657645397}
-  - component: {fileID: 8890354911209904506}
   - component: {fileID: 4288431740706854129}
   - component: {fileID: 4585408528793819504}
   - component: {fileID: 821433155282971803}
   - component: {fileID: 7633773507187330584}
   - component: {fileID: 1650327873928263750}
   - component: {fileID: 5589684158214429444}
+  - component: {fileID: 7152169366945369897}
+  - component: {fileID: 8618631780587953553}
+  - component: {fileID: 2681348363964789321}
   m_Layer: 9
   m_Name: Chort
   m_TagString: Enemy
@@ -204,32 +206,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8890354911209904506
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5600841341526712845}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0.1875, y: 0, z: 0.125, w: 0.625}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.5}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
-  m_EdgeRadius: 0
 --- !u!114 &4288431740706854129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,9 +302,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 2
-  pickNextWaypointDist: 2.5
-  endReachedDistance: 1.5
+  slowdownDistance: 4
+  pickNextWaypointDist: 50
+  endReachedDistance: 1
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -368,6 +344,76 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7152169366945369897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600841341526712845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb6be819f11b8744b1d02093f2f1cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos: {fileID: 0}
+  summoner: {fileID: 0}
+  index: 0
+--- !u!114 &8618631780587953553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600841341526712845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f33dadd79701884bb25a0b9e6d761b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathfind: {fileID: 0}
+  rightTurned: 0
+  weaponAnimator: {fileID: 8151323369544098384}
+  target: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  timeAttack: 0
+  startTimeAttack: 2
+  attackPos: {fileID: 7920721488843755384}
+  attackRangeX: 1
+  attackRangeY: 1
+  isAbleAttack: 1
+  maxDistance: 50
+  minDistance: 1
+  damage: 3
+  isWalking: 0
+--- !u!61 &2681348363964789321
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600841341526712845}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027191848, y: -0.33292437}
+  m_SpriteTilingProperty:
+    border: {x: 0.1875, y: 0, z: 0.125, w: 0.625}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6872942, y: 0.83415127}
+  m_EdgeRadius: 0
 --- !u!1 &5734384021585422110
 GameObject:
   m_ObjectHideFlags: 0
