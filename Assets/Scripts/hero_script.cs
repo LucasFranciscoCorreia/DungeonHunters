@@ -113,14 +113,7 @@ public class hero_script : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    timeAttack = startTimeAttack;
                     isAbleAttack = false;
-                    FindObjectOfType<AudioManager>().Play("porrada");
-                    Collider2D[] enemies = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, enemieLayer);
-                    for (int i = 0; i < enemies.Length; i++)
-                    {
-                        enemies[i].GetComponent<EnemyHealth>().TakeDamage(damage);
-                    }
                 }
                 else
                 {
@@ -136,8 +129,19 @@ public class hero_script : MonoBehaviour
 
             animator.SetBool("isWalking", isWalking);
             animator.SetBool("isAbleAttack", isAbleAttack);
+            weaponAnimator.SetBool("isAttacking", !isAbleAttack);
             body.velocity = new Vector2(0, 0);
-            animator.SetBool("isAttacking", !isAbleAttack);
+        }
+    }
+
+    public void DealDamage()
+    {
+        timeAttack = startTimeAttack;
+        FindObjectOfType<AudioManager>().Play("porrada");
+        Collider2D[] enemies = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, enemieLayer);
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            enemies[i].GetComponent<EnemyHealth>().TakeDamage(damage);
         }
     }
 
