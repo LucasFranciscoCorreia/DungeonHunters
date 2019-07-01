@@ -50827,27 +50827,27 @@ PrefabInstance:
     - target: {fileID: 7101381916327052578, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 67.1
       objectReference: {fileID: 0}
     - target: {fileID: 7101381916327052578, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 18.26
       objectReference: {fileID: 0}
     - target: {fileID: 7101381916327052578, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.09
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7101381915234660590, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: field of view
-      value: 88.35
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7101381915234660590, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5484706231904882030, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
@@ -50902,7 +50902,7 @@ PrefabInstance:
     - target: {fileID: 5484706231243351374, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_FontData.m_Alignment
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 432ec9bb1b2721c4eb5f173146931f10, type: 3}

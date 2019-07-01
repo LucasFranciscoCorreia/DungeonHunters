@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 341408502}
   - component: {fileID: 341408504}
   - component: {fileID: 341408503}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: portao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1090,7 @@ GameObject:
   - component: {fileID: 452867147}
   - component: {fileID: 452867149}
   - component: {fileID: 452867148}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47950,6 +47950,12 @@ MonoBehaviour:
   key1: {fileID: 1469543749}
   key2: {fileID: 1014622469}
   showDoor: {fileID: 1367471317}
+  quest1Scratch: {fileID: 0}
+  quest1_1Scratch: {fileID: 0}
+  quest1_2Scratch: {fileID: 0}
+  quest2Scratch: {fileID: 0}
+  quest2: {fileID: 0}
+  miniboss: {fileID: 741033516}
 --- !u!4 &633163247
 Transform:
   m_ObjectHideFlags: 0
@@ -48171,6 +48177,12 @@ PrefabInstance:
       objectReference: {fileID: 323803503}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fbb40b25def9de49be1bf1ee4d4bfd1, type: 3}
+--- !u!1 &741033516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3217295732693618706, guid: 8fbb40b25def9de49be1bf1ee4d4bfd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 741033515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &751596877
 GameObject:
   m_ObjectHideFlags: 0
@@ -49657,7 +49669,7 @@ GameObject:
   - component: {fileID: 1860067637}
   - component: {fileID: 1860067636}
   - component: {fileID: 1860067635}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63151,7 +63163,7 @@ GameObject:
   - component: {fileID: 2055100738}
   - component: {fileID: 2055100740}
   - component: {fileID: 2055100739}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
