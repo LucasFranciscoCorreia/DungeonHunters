@@ -8,7 +8,6 @@ public class Fase1Script : FaseScript
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<hero_script>().fase = this;
         base.Start();
-        
     }
 
         

@@ -13,6 +13,11 @@ public class Fase2Script : FaseScript
         player.transform.position = new Vector3(39, -4.5f, 0);
         var fase = player.GetComponent<hero_script>().fase;
 
+        this.quest1 = fase.quest1;
+        this.quest1_1 = fase.quest1_1;
+        this.quest1_2 = fase.quest1_2;
+        this.quest2 = fase.quest2;
+
         this.key1 = fase.key1;
         this.key2 = fase.key2;
         this.showDoor = fase.showDoor;

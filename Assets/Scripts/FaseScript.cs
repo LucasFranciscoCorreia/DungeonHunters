@@ -21,16 +21,21 @@ public class FaseScript : MonoBehaviour
     public Text key2;
     public Text showDoor;
 
+    public GameObject quest1, quest1_1, quest1_2;
     public GameObject quest1Scratch, quest1_1Scratch, quest1_2Scratch;
     public GameObject quest2Scratch;
     public Text quest2;
+
+    public bool isFinalLevel;
+
+    public int numKeys;
 
     public void Start()
     {
         keys1 = 0;
         keys2 = 0;
         showDoor.enabled = false;
-        while (positions.Count < 4)
+        while (positions.Count < numKeys)
         {
             int i = Random.Range(0, spots.Length);
             if (!positions.Contains(i))
@@ -38,11 +43,12 @@ public class FaseScript : MonoBehaviour
                 positions.Add(i);
             }
         }
-        for (int i = 0; i < keys.Length; i++)
+        for (int i = 0; i < numKeys; i++)
         {
             keys[i].transform.position = spots[positions[i]].position;
         }
-        collider.enabled = false;
+        if (!isFinalLevel)
+            collider.enabled = false;
     }
 
     void FixedUpdate()

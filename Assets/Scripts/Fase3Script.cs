@@ -16,6 +16,11 @@ public class Fase3Script : FaseScript
         this.key2 = fase.key2;
         this.showDoor = fase.showDoor;
 
+        this.quest1 = fase.quest1;
+        this.quest1_1 = fase.quest1_1;
+        this.quest1_2 = fase.quest1_2;
+        this.quest2 = fase.quest2;
+
         this.key1.text = "0/2";
         this.key2.text = "0/2";
 
@@ -57,8 +62,7 @@ public class Fase3Script : FaseScript
         switch (collision.tag)
         {
             case "Player":
-                //lcs.FadeToLevel("Fase4");
-                Debug.Log("Fase 4");
+                lcs.FadeToLevel("Fase4");
                 break;
         }
     }
