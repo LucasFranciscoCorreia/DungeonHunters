@@ -290,7 +290,7 @@ PrefabInstance:
     - target: {fileID: 3939102999712904380, guid: 2e5ad3daf837a664a8fd78bcf7312e96,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3939102999712904380, guid: 2e5ad3daf837a664a8fd78bcf7312e96,
         type: 3}
@@ -17721,7 +17721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: theme
-    clip: {fileID: 8300000, guid: bc85f77348b57934bab10b84d0e534f8, type: 3}
+    clip: {fileID: 8300000, guid: add233648510ce546bfba75821b27329, type: 3}
     volume: 1
     pitch: 1
     loop: 1
@@ -17750,6 +17750,7 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     source: {fileID: 0}
+  volume: 0
 --- !u!4 &778920752
 Transform:
   m_ObjectHideFlags: 0
@@ -17928,7 +17929,7 @@ Transform:
   - {fileID: 2055100738}
   - {fileID: 341408502}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1341047804
 PrefabInstance:

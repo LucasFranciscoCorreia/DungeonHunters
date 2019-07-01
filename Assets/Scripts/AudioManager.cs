@@ -8,7 +8,6 @@ public class AudioManager : MonoBehaviour
     public float volume;
     void Awake()
     {
-        volume = 1f;
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();

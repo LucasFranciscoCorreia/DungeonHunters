@@ -349,7 +349,7 @@ PrefabInstance:
     - target: {fileID: 3939102999712904377, guid: 2e5ad3daf837a664a8fd78bcf7312e96,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3939102999712904380, guid: 2e5ad3daf837a664a8fd78bcf7312e96,
         type: 3}
@@ -49148,7 +49148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: theme
-    clip: {fileID: 8300000, guid: bc85f77348b57934bab10b84d0e534f8, type: 3}
+    clip: {fileID: 8300000, guid: 321c01b4e8aabd4448345e0f421602b6, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -49177,6 +49177,7 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     source: {fileID: 0}
+  volume: 0
 --- !u!4 &1514233826
 Transform:
   m_ObjectHideFlags: 0
