@@ -27,7 +27,6 @@ public class LevelChangerScript : MonoBehaviour
 
     public void OnFadeComplete()
     {
-        float volume = GameObject.FindObjectOfType<AudioManager>().volume;
         SceneManager.LoadScene(levelName);
     }
 }

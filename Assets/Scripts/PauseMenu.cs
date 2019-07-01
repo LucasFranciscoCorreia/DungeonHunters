@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject Pausemenu;
+    public GameObject Pausemenu, Optionsmenu;
     public GameObject Map;
     public static bool isPaused;
 
@@ -43,6 +43,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         Pausemenu.SetActive(false);
+        Optionsmenu.SetActive(false);
         isPaused = false;
     }
 

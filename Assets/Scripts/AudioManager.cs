@@ -5,14 +5,15 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-    public float volume;
+    public VolumeScript volume;
     void Awake()
     {
+        volume = GameObject.FindObjectOfType<VolumeScript>();
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.volume = s.volume;
+            s.source.volume = volume.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
@@ -30,19 +31,18 @@ public class AudioManager : MonoBehaviour
         {
             if (sound.name.Equals(name))
             {
-                sound.source.volume = volume;
+                sound.source.volume = volume.volume;
                 sound.source.Play();
                 break;
             }
         }
     }
 
-    public void SetVolume(float vol)
+    public void SetVolume(float volume)
     {
-        this.volume = vol;
         foreach (Sound s in sounds)
         {
-            s.source.volume = vol;
+            s.source.volume = volume;
         }
     }
 }
