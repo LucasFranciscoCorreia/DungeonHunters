@@ -223,6 +223,7 @@ MonoBehaviour:
   quest1_2Scratch: {fileID: 1884779041}
   quest2Scratch: {fileID: 1577615026}
   quest2: {fileID: 1843592732}
+  isFinalLevel: 0
   numKeys: 4
 --- !u!4 &83504038
 Transform:
@@ -50879,12 +50880,12 @@ PrefabInstance:
     - target: {fileID: 7101381916327052578, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.0048217773
       objectReference: {fileID: 0}
     - target: {fileID: 7101381916327052578, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.07232857
       objectReference: {fileID: 0}
     - target: {fileID: 7101381916327052578, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
@@ -50925,6 +50926,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101381915340974926, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992287966261710606, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 173
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 432ec9bb1b2721c4eb5f173146931f10, type: 3}
