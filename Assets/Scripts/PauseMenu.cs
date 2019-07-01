@@ -14,10 +14,12 @@ public class PauseMenu : MonoBehaviour
         return isPaused;
     }
 
-    void Start()
+    void Awake()
     {
         isPaused = false;
-        slider.value = GetComponent<VolumeScript>().volume;
+        slider.value = FindObjectOfType<VolumeScript>().volume;
+        Pausemenu.SetActive(false);
+        Optionsmenu.SetActive(false);
     }
 
     void Update()

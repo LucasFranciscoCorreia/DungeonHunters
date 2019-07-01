@@ -158,25 +158,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -228.96}
   m_SizeDelta: {x: -490, y: -372}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &105297900
-Animator:
-  serializedVersion: 3
+--- !u!111 &105297900
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105297898}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 35fadef58a4f55d4589ffe26910c61a1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: beb7f7094b96f61458fd35fd703882e3, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &307766941
 GameObject:
   m_ObjectHideFlags: 0
