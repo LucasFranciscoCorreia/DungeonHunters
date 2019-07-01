@@ -459,7 +459,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 9
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1045511245}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 88.35
     OrthographicSize: 5
@@ -480,7 +480,7 @@ Transform:
   m_Children:
   - {fileID: 2105210231}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341408501
 GameObject:
@@ -17696,6 +17696,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7101381916327052578, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 72.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101381916327052578, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9099998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5484706231904882030, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5484706231156289607, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5484706231018998272, guid: 432ec9bb1b2721c4eb5f173146931f10,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1071159386853045905, guid: 432ec9bb1b2721c4eb5f173146931f10,
         type: 3}
       propertyPath: m_Name
@@ -17957,14 +17982,8 @@ Transform:
   - {fileID: 2055100738}
   - {fileID: 341408502}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1045511245 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4979368675825585613, guid: 432ec9bb1b2721c4eb5f173146931f10,
-    type: 3}
-  m_PrefabInstance: {fileID: 811200813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1341047804
 PrefabInstance:
   m_ObjectHideFlags: 0
