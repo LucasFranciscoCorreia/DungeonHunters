@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject Pausemenu, Optionsmenu;
+    public Slider slider;
     public GameObject Map;
     public static bool isPaused;
 
@@ -15,6 +17,7 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         isPaused = false;
+        slider.value = GetComponent<VolumeScript>().volume;
     }
 
     void Update()

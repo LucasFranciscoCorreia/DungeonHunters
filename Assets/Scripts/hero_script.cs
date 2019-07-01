@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.UI;
 public class hero_script : MonoBehaviour
 {
     private Rigidbody2D body;
@@ -22,10 +22,9 @@ public class hero_script : MonoBehaviour
     public int damage;
 
     public float maxStamina;
-    //public float attackCostStamina;
     public float runCostStamina;
     public float currentStamina;
-
+    
     public UIController UI;
 
     // Start is called before the first frame update

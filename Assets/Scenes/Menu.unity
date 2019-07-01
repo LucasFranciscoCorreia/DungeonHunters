@@ -1577,7 +1577,7 @@ GameObject:
   - component: {fileID: 1648945309}
   m_Layer: 0
   m_Name: Volume
-  m_TagString: Untagged
+  m_TagString: Volume
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1964,7 +1964,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1648945309}
+      - m_Target: {fileID: 593701732}
         m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:

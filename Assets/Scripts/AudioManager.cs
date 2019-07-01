@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     public VolumeScript volume;
     void Awake()
     {
-        volume = GameObject.FindObjectOfType<VolumeScript>();
+        volume = FindObjectOfType<VolumeScript>();
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -44,5 +44,6 @@ public class AudioManager : MonoBehaviour
         {
             s.source.volume = volume;
         }
+        this.volume.SetVolume(volume);
     }
 }
