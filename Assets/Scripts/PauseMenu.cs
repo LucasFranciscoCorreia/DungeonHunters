@@ -6,15 +6,15 @@ public class PauseMenu : MonoBehaviour
     public GameObject Pausemenu;
     public GameObject Map;
     public static bool isPaused;
-    public static bool seeingMap;
+
     public static bool IsPaused()
     {
         return isPaused;
     }
+
     void Start()
     {
         isPaused = false;
-        seeingMap = false;
     }
 
     void Update()
@@ -27,39 +27,9 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
-                if(!seeingMap)
-                    Pause();
-            }
-        }else if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if (seeingMap)
-            {
-                ReturnGame();
-                seeingMap = false;
-            }
-            else
-            {
-                if (!isPaused)
-                {
-                    SeeMap();
-                    seeingMap = true;
-                }
+                Pause();
             }
         }
-    }
-
-    public void SeeMap()
-    {
-        Time.timeScale = 0;
-        isPaused = true;
-        Map.SetActive(true);
-    }
-
-    public void ReturnGame()
-    {
-        Time.timeScale = 1;
-        isPaused = false;
-        Map.SetActive(false);
     }
 
     public void Pause()

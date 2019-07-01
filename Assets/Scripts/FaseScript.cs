@@ -22,6 +22,8 @@ public class FaseScript : MonoBehaviour
     public Text showDoor;
 
     public GameObject quest1Scratch, quest1_1Scratch, quest1_2Scratch;
+    public GameObject quest2Scratch;
+    public Text quest2;
 
     public void Start()
     {
