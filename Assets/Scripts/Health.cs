@@ -11,12 +11,14 @@ public class Health : MonoBehaviour
     public float damageTime;
 
     private LevelChangerScript lcs;
+    private SpriteRenderer sprite;
 
     private void Start()
     {
         health = 2 * numHearts;
         damageTime = 1;
         lcs = FindObjectOfType<LevelChangerScript>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -27,6 +29,14 @@ public class Health : MonoBehaviour
         {
             Destroy(this.gameObject);
             SceneManager.LoadScene("GameOver");
+        }
+        if(time > 0)
+        {
+            sprite.color = new Color(1, 1, 1, 0.5f);
+        }
+        else
+        {
+            sprite.color = new Color(1, 1, 1, 1);
         }
     }
 
