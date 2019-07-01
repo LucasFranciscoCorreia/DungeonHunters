@@ -670,7 +670,7 @@ Transform:
   m_Children:
   - {fileID: 2105210231}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341408501
 GameObject:
@@ -17928,7 +17928,7 @@ Transform:
   - {fileID: 2055100738}
   - {fileID: 341408502}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1341047804
 PrefabInstance:
