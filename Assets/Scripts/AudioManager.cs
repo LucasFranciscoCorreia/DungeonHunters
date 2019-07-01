@@ -5,9 +5,10 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-
+    public float volume;
     void Awake()
     {
+        volume = 1f;
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -21,6 +22,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         Play("theme");
+
     }
 
     public void Play(string name)
@@ -29,9 +31,19 @@ public class AudioManager : MonoBehaviour
         {
             if (sound.name.Equals(name))
             {
+                sound.source.volume = volume;
                 sound.source.Play();
                 break;
             }
+        }
+    }
+
+    public void SetVolume(float vol)
+    {
+        this.volume = vol;
+        foreach (Sound s in sounds)
+        {
+            s.source.volume = vol;
         }
     }
 }
