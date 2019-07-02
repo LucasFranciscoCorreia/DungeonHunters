@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     LevelChangerScript lcs;
+    
     public void Start()
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("currentXp");
         lcs = FindObjectOfType<LevelChangerScript>();
     }
 

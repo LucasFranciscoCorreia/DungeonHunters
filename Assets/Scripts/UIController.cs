@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     public Slider sliderStamina;
-    public Text levelText;
+    public Text levelValue;
 
     public void SetStamina(float maxStamina, float currentStamina)
     {
@@ -18,6 +18,6 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //levelText.text = hero_script.GetCurrentXp().ToString();
+        levelValue.text = hero_script.GetCurrentXp().ToString() + " / " + PlayerPrefs.GetInt("maxScore");
     }
 }

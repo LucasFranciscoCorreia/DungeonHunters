@@ -136,7 +136,7 @@ MonoBehaviour:
   spawn: {fileID: 0}
   isRespawnable: 0
   isSummoner: 0
-  baseXp: 10
+  baseXp: 70
 --- !u!95 &4542823143009413333
 Animator:
   serializedVersion: 3

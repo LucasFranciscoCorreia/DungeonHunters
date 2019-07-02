@@ -132,7 +132,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1
+  m_Mass: 0.90372604
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
   spawn: {fileID: 0}
   isRespawnable: 0
   isSummoner: 0
-  baseXp: 10
+  baseXp: 40
 --- !u!61 &6678378517471589248
 BoxCollider2D:
   m_ObjectHideFlags: 0

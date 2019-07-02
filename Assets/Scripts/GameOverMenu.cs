@@ -10,6 +10,7 @@ public class GameOverMenu : MonoBehaviour
     private void Start()
     {
         lcs = FindObjectOfType<LevelChangerScript>();
+        PlayerPrefs.DeleteKey("currentXp");
     }
     public void ReturnMenu()
     {

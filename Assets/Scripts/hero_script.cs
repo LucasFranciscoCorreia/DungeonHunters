@@ -58,7 +58,7 @@ public class hero_script : MonoBehaviour
             float hori = 0, vert = 0;
             var value = 1f;
 
-            if (!Input.GetKey(KeyCode.LeftShift) && currentStamina < maxStamina)
+            if (!(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && currentStamina < maxStamina)
             {
                 currentStamina += Time.deltaTime;
             }
@@ -70,7 +70,7 @@ public class hero_script : MonoBehaviour
             {
 
                 isWalking = true;
-                if (Input.GetKey(KeyCode.LeftShift) && currentStamina > 0)
+                if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && currentStamina > 0)
                 {
                     value = 1.5f;
                     currentStamina -= 2 * Time.deltaTime;
@@ -186,14 +186,14 @@ public class hero_script : MonoBehaviour
         Gizmos.DrawWireCube(attackPos.position,new Vector3(attackRangeX, attackRangeY,1));
     }
 
-    public static void AddXp(float xp)
+    public static void AddXp(int xp)
     {
-        float newXp = GetCurrentXp() + xp;
-        PlayerPrefs.SetFloat("currentXp", newXp); 
+        int newXp = GetCurrentXp() + xp;
+        PlayerPrefs.SetInt("currentXp", newXp); 
     }
 
-    public static float GetCurrentXp()
+    public static int GetCurrentXp()
     {
-        return PlayerPrefs.GetFloat("currentXp");
+        return PlayerPrefs.GetInt("currentXp");
     }
 }

@@ -58,6 +58,12 @@ public class EnemyHealth : MonoBehaviour
             }
             Destroy(gameObject);
             FindObjectOfType<FaseScript>().EnemieKilled();
+            hero_script.AddXp(baseXp);
+            int max = PlayerPrefs.GetInt("maxScore");
+            if (hero_script.GetCurrentXp() > max)
+            {
+                PlayerPrefs.SetInt("maxScore", hero_script.GetCurrentXp());
+            }
         }
     }
 
