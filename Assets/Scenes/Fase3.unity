@@ -48056,7 +48056,11 @@ MonoBehaviour:
   quest1_1Scratch: {fileID: 0}
   quest1_2Scratch: {fileID: 0}
   quest2Scratch: {fileID: 0}
+  quest3Scratch: {fileID: 0}
   quest2: {fileID: 0}
+  quest3: {fileID: 0}
+  defeated: 0
+  numEnemies: 40
   isFinalLevel: 0
   numKeys: 4
   miniboss: {fileID: 741033516}

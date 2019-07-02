@@ -17,6 +17,8 @@ public class Fase2Script : FaseScript
         this.quest1_1 = fase.quest1_1;
         this.quest1_2 = fase.quest1_2;
         this.quest2 = fase.quest2;
+        this.quest3 = fase.quest3;
+        this.quest3Scratch = fase.quest3Scratch;
 
         this.key1 = fase.key1;
         this.key2 = fase.key2;

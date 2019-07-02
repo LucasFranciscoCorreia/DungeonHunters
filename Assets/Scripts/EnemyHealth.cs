@@ -31,12 +31,12 @@ public class EnemyHealth : MonoBehaviour
                     drops[2].transform.position = pos;
                     Instantiate(drops[2]);
                 }
-                else if (randomNumber <= 10)
+                else if (randomNumber <= 20)
                 {
                     drops[1].transform.position = pos;
                     Instantiate(drops[1]);
                 }
-                else if (randomNumber <= 34)
+                else if (randomNumber <= 60)
                 {
                     drops[0].transform.position = pos;
                     Instantiate(drops[0]);
@@ -57,7 +57,7 @@ public class EnemyHealth : MonoBehaviour
                 }
             }
             Destroy(gameObject);
-            hero_script.AddXp(baseXp);
+            FindObjectOfType<FaseScript>().EnemieKilled();
         }
     }
 

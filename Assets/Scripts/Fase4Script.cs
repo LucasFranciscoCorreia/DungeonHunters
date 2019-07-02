@@ -19,7 +19,9 @@ public class Fase4Script : FaseScript
         this.quest1_1 = fase.quest1_1;
         this.quest1_2 = fase.quest1_2;
         this.quest2 = fase.quest2;
-
+        this.quest3 = fase.quest3;
+        this.quest3Scratch = fase.quest3Scratch;
+        this.quest3.gameObject.SetActive(false);
         this.showDoor = fase.showDoor;
 
         this.quest1Scratch.SetActive(false);

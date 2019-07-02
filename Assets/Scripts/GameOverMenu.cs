@@ -13,6 +13,7 @@ public class GameOverMenu : MonoBehaviour
     }
     public void ReturnMenu()
     {
+        Destroy(FindObjectOfType<VolumeScript>().gameObject);
         lcs.FadeToLevel("Menu");
     }
 

@@ -24,17 +24,24 @@ public class FaseScript : MonoBehaviour
     public GameObject quest1, quest1_1, quest1_2;
     public GameObject quest1Scratch, quest1_1Scratch, quest1_2Scratch;
     public GameObject quest2Scratch;
+    public GameObject quest3Scratch;
     public Text quest2;
+    public Text quest3;
 
+    public int defeated;
+    public int numEnemies;
     public bool isFinalLevel;
 
     public int numKeys;
 
     public void Start()
     {
+        defeated = 0;
         keys1 = 0;
         keys2 = 0;
+
         showDoor.enabled = false;
+
         while (positions.Count < numKeys)
         {
             int i = Random.Range(0, spots.Length);
@@ -43,10 +50,14 @@ public class FaseScript : MonoBehaviour
                 positions.Add(i);
             }
         }
+
         for (int i = 0; i < numKeys; i++)
         {
             keys[i].transform.position = spots[positions[i]].position;
         }
+
+        quest3.text = "Defeat " + numEnemies + " Enemies [0/" + numEnemies + "]";
+
         if (!isFinalLevel)
             collider.enabled = false;
     }
@@ -60,6 +71,12 @@ public class FaseScript : MonoBehaviour
             collider.enabled = true;
             showDoor.enabled = true;
             quest1Scratch.SetActive(true);
+        }
+        if(defeated == numEnemies)
+        {
+            FindObjectOfType<hero_script>().damage++;
+            quest3Scratch.SetActive(true);
+            defeated++;
         }
     }
 
@@ -90,6 +107,19 @@ public class FaseScript : MonoBehaviour
                 key2.text = "2/2";
                 quest1_2Scratch.SetActive(true);
                 break;
+        }
+    }
+
+    public void EnemieKilled()
+    {
+        defeated++;
+        if(defeated < numEnemies)
+        {
+            quest3.text = "Defeat " + numEnemies + " Enemies[" + defeated + "/" + numEnemies + "]";
+        }
+        else
+        {
+            quest3.text = "Defeat " + numEnemies + " Enemies[" + numEnemies + "/" + numEnemies + "]";
         }
     }
 }
