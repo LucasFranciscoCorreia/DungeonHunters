@@ -8,7 +8,7 @@ public class CreditsScript : MonoBehaviour
     LevelChangerScript levelChanger;
     void Start()
     {
-        
+        levelChanger = FindObjectOfType<LevelChangerScript>();
     }
 
     // Update is called once per frame
@@ -23,6 +23,6 @@ public class CreditsScript : MonoBehaviour
     void ReturnMainMenu()
     {
         Destroy(GameObject.FindGameObjectWithTag("Player"));
-        SceneManager.LoadScene("Menu");
+        levelChanger.FadeToLevel("Menu");
     }
 }
