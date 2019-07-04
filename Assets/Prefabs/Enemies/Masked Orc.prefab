@@ -277,7 +277,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   timeAttack: 0
-  startTimeAttack: 4
+  startTimeAttack: 1.5
   attackPos: {fileID: 5500667101444015278}
   isAbleAttack: 1
   maxDistance: 7

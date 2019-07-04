@@ -20,6 +20,7 @@ public class Fase4Script : FaseScript
         this.quest1_2 = fase.quest1_2;
         this.quest2 = fase.quest2;
         this.quest3 = fase.quest3;
+        this.quest2Scratch = fase.quest2Scratch;
         this.quest3Scratch = fase.quest3Scratch;
         this.quest3.gameObject.SetActive(false);
         this.showDoor = fase.showDoor;
@@ -28,6 +29,8 @@ public class Fase4Script : FaseScript
         this.quest1_1.SetActive(false);
         this.quest1_2.SetActive(false);
         this.quest2.gameObject.SetActive(false);
+        this.quest2Scratch.SetActive(false);
+        this.quest3Scratch.SetActive(false);
 
         this.quest1.GetComponent<Text>().text = "Defeat the Demon";
   

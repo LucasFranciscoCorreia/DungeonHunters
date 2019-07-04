@@ -37,6 +37,8 @@ public class Fase3Script : FaseScript
         this.quest1Scratch.SetActive(false);
         this.quest1_1Scratch.SetActive(false);
         this.quest1_2Scratch.SetActive(false);
+        this.quest2Scratch.SetActive(false);
+        this.quest3Scratch.SetActive(false);
 
         this.quest2 = fase.quest2;
         this.quest2.text = "Defeat the Ogre";
