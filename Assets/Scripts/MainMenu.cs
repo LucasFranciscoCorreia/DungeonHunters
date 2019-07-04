@@ -22,8 +22,8 @@ public class MainMenu : MonoBehaviour
         Application.Quit(); 
     }
 
-    public void DebugGame()
+    public void Credits()
     {
-        SceneManager.LoadScene("Debug");
+        lcs.FadeToLevel("Credits");
     }
 }

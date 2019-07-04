@@ -7,8 +7,10 @@ public class Fase2Script : FaseScript
 {
 
     public GameObject miniboss;
+
     void Start()
     {
+
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = new Vector3(39, -4.5f, 0);
         var fase = player.GetComponent<hero_script>().fase;
